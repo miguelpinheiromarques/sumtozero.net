@@ -24,8 +24,8 @@ pagination:
             </h2>
             <p>
                 <time>
-                    {{ post.date | readableDate }}
-                    by
+                    <time datetime="{{ post.date }}">{{ post.date | readableDate(lang) }}</time>
+                    por
                     <a>{{ post.data.author }}</a>
 
                 </time>
