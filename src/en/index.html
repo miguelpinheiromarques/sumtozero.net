@@ -9,15 +9,6 @@ pagination:
   alias: pagedPosts
 ---
 
-<div style="border: 2px solid red; padding: 10px; background: white; color: black;">
-  <p><strong>DEBUG INFO:</strong></p>
-  <ul>
-    <li><strong>Alias Name:</strong> pagedPosts</li>
-    <li><strong>Is pagedPosts defined?</strong> {{ pagedPosts | dump | length > 0 }}</li>
-    <li><strong>Raw Dump:</strong> {{ pagedPosts | dump | truncate(50) }}</li>
-  </ul>
-</div>
-
 <section class="posts">
 
 {% for post in pagedPosts %}
