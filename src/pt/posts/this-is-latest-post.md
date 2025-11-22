@@ -8,7 +8,7 @@ date: 2020-09-23T15:13:13.021Z
 author: Miguel Pinheiro Marques
 translationKey: "firstpost"
 permalink: "/pt/posts/primeiro-post/" 
-tags: second-tag
+tags: ["Mastering"]
 ---
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
