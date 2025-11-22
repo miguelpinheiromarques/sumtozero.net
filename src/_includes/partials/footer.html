@@ -1,18 +1,18 @@
 <footer>
 	<div class="lang-switch">
-		<ul>
-		  {% if lang == "en" %}
-		    {% set translatedUrl = translationKey | getLocalizedUrl("pt", collections.all) %}
-		    <li>
-		      <a href="{{ translatedUrl if translatedUrl else '/pt/' }}">Português</a>
-		    </li>
-		  {% else %}
-		    {% set translatedUrl = translationKey | getLocalizedUrl("pt", collections.all) %}
-		    <li>
-		      <a href="{{ translatedUrl if translatedUrl else '/en/' }}">English</a>
-		    </li>
-		  {% endif %}
-		</ul>
+		{% if lang == "en" %}
+		  {% set targetLang = "es" %}
+		  {% set label = "ES" %}
+		{% else %}
+		  {% set targetLang = "en" %}
+		  {% set label = "EN" %}
+		{% endif %}
+		
+		{% set translatedUrl = translationKey | getLocalizedUrl(targetLang, collections.all) %}
+		
+		<a href="{{ translatedUrl if translatedUrl else '/' + targetLang + '/' }}" class="lang-toggle">
+		  {{ label }}
+		</a>
 	</div>
 	<small>&copy; 2010-{{year}} {{settings.author}}. All rights reserved.</small>
 </footer>
