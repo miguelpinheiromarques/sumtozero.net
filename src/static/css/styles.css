@@ -69,10 +69,14 @@
 	}
 	section svg path{fill:#f9f9f9;}
 	
-	nav {margin:0;padding:1rem 0;}
-	nav ul{list-style-type: none;margin:0;padding:0;}
-	nav ul li{display:inline;margin-right:0.20rem;}
-	nav ul li a {font-size:0.8rem;text-transform:uppercase;font-weight:600}
+	.main-nav {margin:0;padding:1rem 0;}
+	.main-nav ul{list-style-type: none;margin:0;padding:0;}
+	.main-nav ul li{display:inline;margin-right:0.20rem;}
+	.main-nav ul li a {font-size:0.8rem;text-transform:uppercase;font-weight:600}
+	.main-nav ul li a[aria-current="page"],
+	.main-nav ul li a.active {
+	  background-color: #f0f0f0;
+	}
 	
 	p {
 		 line-height: calc(1ex / 0.32);
