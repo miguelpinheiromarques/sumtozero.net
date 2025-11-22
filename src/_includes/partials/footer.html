@@ -3,29 +3,22 @@
 	<div class="lang-switch">
 		{% if lang == "en" %}
 		  {% set targetLang = "pt" %}
-		  {% set label = "PT" %}
+		  {% set label = "Português" %}
 		{% else %}
 		  {% set targetLang = "en" %}
-		  {% set label = "EN" %}
+		  {% set label = "English" %}
 		{% endif %}
 		
 		{% set translatedUrl = "" %}
 		
-		{% if pagination and pagination.hrefs %}
-		  {% if pagination.pageNumber == 0 %}
-		    {% set translatedUrl = "/" + targetLang + "/" %}
-		  {% else %}
-		    {% set translatedUrl = "/" + targetLang + "/" + pagination.pageNumber + "/" %}
-		  {% endif %}
+		{% if '/tags/' in page.url %}
 		
-		{% elif '/tags/' in page.url %}		  
-		  {% set translatedTag = tag %} {# Default: assume tag is same (e.g. "CSS") #}
+		  {% set translatedTag = tag %} 
 		  
 		  {% if lang == "en" %}
 		    {% if tag_translations[tag] %}
 		      {% set translatedTag = tag_translations[tag] %}
 		    {% endif %}
-		    
 		  {% else %}
 		    {% for enTag, ptTag in tag_translations %}
 		      {% if ptTag == tag %}
@@ -36,11 +29,20 @@
 		
 		  {% set translatedUrl = "/" + targetLang + "/tags/" + (translatedTag | slugify) + "/" %}
 		
+		{% elif pagination and pagination.hrefs %}
+		  
+		  {% if pagination.pageNumber == 0 %}
+		    {% set translatedUrl = "/" + targetLang + "/" %}
+		  {% else %}
+		    {% set translatedUrl = "/" + targetLang + "/" + pagination.pageNumber + "/" %}
+		  {% endif %}
+		
 		{% else %}
 		  {% set translatedUrl = translationKey | getLocalizedUrl(targetLang, collections.all) %}
 		{% endif %}
 		
 		<a href="{{ translatedUrl if translatedUrl else '/' + targetLang + '/' }}" class="lang-toggle">{{ label }}</a>
+		
 	</div>
 	<small>&copy; 2010-{{year}} {{settings.author}}. All rights reserved.</small>
 </footer>
