@@ -7,6 +7,14 @@ module.exports = {
 	en: "digital home of miguel pinheiro marques",
 	pt: "página pessoal de miguel pinheiro marques"
   },	
+	next_post: {
+    en: "Next Post →",
+    pt: "Próximo Artigo →"
+  },
+  previous_post: {
+    en: "← Previous Post",
+    pt: "← Artigo Anterior"
+  },
   home: {
 	en: "Home",
 	pt: "Início"
