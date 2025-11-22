@@ -1,13 +1,13 @@
 {
   "scripts": {
-    "start": "npm-run-all --parallel css eleventy browsersync",
-    "eleventy": "eleventy --watch",
-    "debug": "set DEBUG=* & eleventy",
-    "build": "cross-env NODE_ENV=production eleventy",
-    "browsersync": "browser-sync start --server _site --files _site --port 8080 --no-notify --no-open"
+    "start": "eleventy --serve",
+    "build": "cross-env NODE_ENV=production eleventy"
+  },
+  "engines": {
+    "node": ">=18.0.0" 
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0.",
+    "@11ty/eleventy": "^3.0.0", 
     "browser-sync": "^2.27.7",
     "cross-env": "^7.0.3",
     "html-minifier": "^4.0.0",
