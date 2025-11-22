@@ -93,7 +93,7 @@ a:visited {
 }
 
 a:hover {
-	background-color: color-mix(in srgb, AccentColor, CanvasText 15%);
+	background-color: light-dark(color-mix(in srgb, AccentColor, black 50%),color-mix(in srgb, AccentColor, white 15%));
 	text-decoration:none;
 }
 
@@ -138,7 +138,7 @@ section svg path {
 
 .main-nav ul li a[aria-current="page"],
 .main-nav ul li a.active {
-	background-color: light-dark(color-mix(in srgb, AccentColor, white 15%),color-mix(in srgb, AccentColor, black 25%));
+	background-color: light-dark(color-mix(in srgb, AccentColor, white 15%),color-mix(in srgb, AccentColor, black 50%));
 }
 
 p {
