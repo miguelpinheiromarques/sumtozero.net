@@ -444,6 +444,10 @@ footer svg path {
   font-size:0.85rem;
   text-transform:lowercase;
 }
+.tag-link:hover {
+  background-color: color-mix(in srgb, Canvas, CanvasText 5%);
+  color: CanvasText;
+}
 .rss a{background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 5%), color-mix(in srgb, Canvas, black 50%));}
 .rss-link {
   display: inline-flex;
