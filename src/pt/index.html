@@ -30,9 +30,7 @@ pagination:
             {% endif %}
 
             <p>
-                <a href="{{ post.url | url }}">
-                    Read more →
-                </a>
+              <a href="{{ post.url }}" class="read-more">{{ 'read_more' | t }}</a>
             </p>
 
         </article>
