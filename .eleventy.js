@@ -1,6 +1,5 @@
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
@@ -17,17 +16,9 @@ module.exports = function (eleventyConfig) {
     );
   });
 
-  // Syntax Highlighting for Code blocks
-  eleventyConfig.addPlugin(syntaxHighlight);
-
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
-
-  // Copy Static Files to /_Site
-  eleventyConfig.addPassthroughCopy({
-    "./node_modules/alpinejs/dist/cdn.min.js": "./static/js/alpine.js",
-  });
 
   // Copy CSS to route of /_site  
   eleventyConfig.addPassthroughCopy("./src/static/css");
@@ -42,6 +33,11 @@ module.exports = function (eleventyConfig) {
 
   // Copy robots to route of /_site  
   eleventyConfig.addPassthroughCopy("./src/robots.txt");  
+
+  // Add the global variable "year"
+  eleventyConfig.addGlobalData("year", () => {
+    return new Date().getFullYear();
+  });
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
