@@ -264,3 +264,27 @@
 	.lang-switch{float:right}
 	.lang-switch ul{display:inline;text-align:right;list-style-type: none;}
 	.lang-switch ul li{margin-left:2rem;display:inline;}
+
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.nav-next {
+  text-align: right;
+  margin-left: auto; /* Pushes to the right if prev is missing */
+}
+
+.nav-label {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #666;
+  font-weight: bold;
+}
+
+.nav-title {
+  font-size: 1.1em;
+}
