@@ -447,3 +447,20 @@ footer svg path {
 .tag-link:hover {
   background-color: #ddd;
 }
+
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* Space between icon and text */
+  text-decoration: none;
+  color: #555; /* Adjust to your text color */
+  transition: color 0.2s ease;
+}
+
+.rss-link:hover {
+  color: #f26522; /* Standard RSS Orange, or use your brand color */
+}
+
+.rss-link svg {
+  display: block;
+}
