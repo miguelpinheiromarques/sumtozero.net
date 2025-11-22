@@ -17,34 +17,20 @@ layout: default
         {{ content | safe }}
     </article>
 
-</section>
-
-{# 1. Get the collection #}
 {% set currentCollection = collections["posts_" + lang] %}
-
-{# 2. Manually find the current post index in the list #}
 {% set nextPost = null %}
 {% set prevPost = null %}
-
 {% for post in currentCollection %}
-  {% if post.url == page.url %}
-    {# We found the current post! #}
-    
-    {# The post BEFORE this one in the list (Previous) #}
+  {% if post.url == page.url %}    
     {% if loop.index0 > 0 %}
       {% set prevPost = currentCollection[loop.index0 - 1] %}
     {% endif %}
-
-    {# The post AFTER this one in the list (Next) #}
     {% if not loop.last %}
       {% set nextPost = currentCollection[loop.index0 + 1] %}
     {% endif %}
-    
   {% endif %}
 {% endfor %}
 
-
-{# 3. Render the Links #}
 <hr />
 <nav class="post-navigation" aria-label="Post Navigation">
   
@@ -67,3 +53,4 @@ layout: default
   </div>
 
 </nav>
+</section>
