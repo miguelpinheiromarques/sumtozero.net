@@ -2,11 +2,17 @@
 	<div class="lang-switch">
 		<ul>
 		  {% if lang == "en" %}
-		    <li><span aria-current="page">EN</span></li>
-		    <li><a href="/pt{{ page.url | replace('/en/', '/') }}">PT</a></li>
+		    <li><span aria-current="page" style="font-weight: bold;">EN</span></li>    
+		    {% set translatedUrl = translationKey | getLocalizedUrl("pt", collections.all) %}
+		    <li>
+		      <a href="{{ translatedUrl if translatedUrl else '/pt/' }}">PT</a>
+		    </li>
 		  {% else %}
-		    <li><a href="/en{{ page.url | replace('/pt/', '/') }}">EN</a></li>
-		    <li><span aria-current="page">PT</span></li>
+		    {% set translatedUrl = translationKey | getLocalizedUrl("pt", collections.all) %}
+		    <li>
+		      <a href="{{ translatedUrl if translatedUrl else '/en/' }}">EN</a>
+		    </li>
+		    <li><span aria-current="page" style="font-weight: bold;">PT</span></li>
 		  {% endif %}
 		</ul>
 	</div>
