@@ -12,6 +12,30 @@ h3 {
   @apply text-2xl font-bold mb-3;
 }
 
+::-moz-selection {
+	color: Canvas;
+	background: #4e77f6;
+}
+::selection {
+	color: Canvas;
+	background: #4e77f6;
+}
+
+body{
+	font-family: "IBM Plex Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	font-size: clamp(0.95rem, 1.095rem + -0.227vw, 1.05rem);
+	letter-spacing: 0;
+}
+
+@supports (font: -apple-system-body){
+	body{letter-spacing: -0.011em;}
+}
+
+.logo svg{
+	width:50px;
+	height:auto;
+}
+
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
