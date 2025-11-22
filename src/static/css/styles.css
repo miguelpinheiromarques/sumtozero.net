@@ -441,7 +441,8 @@ footer svg path {
   border-radius: 0.25rem;
   text-decoration: none;
   margin-left: 1rem;
-  font-size:0.75rem;
+  font-size:0.85rem;
+  text-transform:lowercase;
 }
 .rss a{background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 5%), color-mix(in srgb, Canvas, black 50%));}
 .rss-link {
