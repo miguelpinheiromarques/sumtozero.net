@@ -20,7 +20,7 @@ body {
 	color: Canvas;
 	background: #4e77f6;
 }
-section,header,footer,.hero,nav{
+section,header,footer,.hero{
 	margin: 0 1rem;
 	@media screen and (min-width: 48em) {
 		 margin: 0 20%;
