@@ -98,6 +98,8 @@ a:hover {
 	text-decoration:none;
 }
 
+@media (prefers-color-scheme: dark) {a,a:visited {color: CanvasText;}}
+
 section a,section a:visited {color:CanvasText;background-color:transparent;padding:0;border-radius:0;font-weight:600}
 section a:hover{color:CanvasText;background-color:transparent;text-decoration:underline}
 
