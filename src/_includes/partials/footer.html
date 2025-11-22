@@ -1,11 +1,11 @@
 <footer>
 	<div class="lang-switch">
 		{% if lang == "en" %}
-		  {% set targetLang = "es" %}
-		  {% set label = "ES" %}
+		  {% set targetLang = "pt" %}
+		  {% set label = "Português" %}
 		{% else %}
 		  {% set targetLang = "en" %}
-		  {% set label = "EN" %}
+		  {% set label = "English" %}
 		{% endif %}
 		
 		{% set translatedUrl = translationKey | getLocalizedUrl(targetLang, collections.all) %}
