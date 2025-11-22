@@ -174,10 +174,11 @@ button svg path{fill:#f9f9f9}
 header{
 	margin-top:2rem;
 }
-.heading h1{
+.heading a h1{
 	line-height:1.8rem;
 	margin:0;
 	font-weight:600
+	text-decoration:none;
 }
 .heading{
 	display: flex;
