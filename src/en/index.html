@@ -1,0 +1,43 @@
+---
+layout: blog
+title: Sum to Zero - a blog by Miguel Pinheiro Marques, mastering engineer
+path: home
+---
+
+<section class="posts">
+    {% set postslist = collections.post %}
+
+    {% for post in postslist | reverse %}
+        <article>
+            <h2>
+                <a href="{{ post.url | url }}">
+                    {% if post.data.title %}
+                        {{ post.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </h2>
+            <p>
+                <time>
+                    {{ post.date | readableDate }}
+                    by
+                    <a>{{ post.data.author }}</a>
+
+                </time>
+            </p>
+            {% if post.data.description %}
+                <p>
+                    {{ post.data.description }}
+                </p>
+            {% endif %}
+
+            <p>
+                <a href="{{ post.url | url }}">
+                    Read more →
+                </a>
+            </p>
+
+        </article>
+    {% endfor %}
+</section>
