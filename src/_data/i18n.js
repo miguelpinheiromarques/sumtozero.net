@@ -23,6 +23,14 @@ newer_posts: {
     en: "Older Posts →",
     pt: "Artigos Mais Antigos →"
   },	
+page_label: {
+    en: "Page",
+    pt: "Página"
+  },
+  of_label: {
+    en: "of",
+    pt: "de"
+  },	
   home: {
 	en: "Home",
 	pt: "Início"
