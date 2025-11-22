@@ -29,7 +29,7 @@ layout: default
 <div class="post-tags">
   <strong>Tags:</strong>  
   {% for tag in tags %}    
-    {% if tag != "posts" %}
+    {% if tag != "post" %}
       <a href="/{{ lang }}/tags/{{ tag | slugify }}/" class="tag-link">#{{ tag }}</a>
     {% endif %}
   {% endfor %}
