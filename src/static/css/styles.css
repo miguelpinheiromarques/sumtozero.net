@@ -68,6 +68,8 @@ section svg{
 	margin-left:1rem;
 }
 section svg path{fill:#f9f9f9;}
+nav {}
+nav ul{display:inline}
 p {
 	 line-height: calc(1ex / 0.32);
 	 margin: calc(1ex / 0.32) 0;
@@ -255,29 +257,3 @@ footer svg{
 footer svg path{
 	fill: color-mix(in srgb, CanvasText, Canvas 40%)
 }
-nav{
-	background-color:light-dark(color-mix(in srgb, Canvas, CanvasText 4%), color-mix(in srgb, Canvas, CanvasText 10%));
-	border-radius:1rem;
-	padding:3px 0 4px 0;
-}
-nav a{
-	color:color-mix(in srgb, CanvasText, Canvas 50%) !important;
-	font-size:0.8rem;
-	padding-right:8px;
-	text-decoration:none;
-	cursor:pointer
-}
-nav a svg{
-	width:16px;
-	height:16px;
-	line-height:16px;
-	display: inline-block;
-	vertical-align:middle;
-	padding-left:4px;
-	margin-top:-3px;
-}
-nav a svg path{
-	fill:color-mix(in srgb, CanvasText, Canvas 50%)
-}
-
-p.copyright{margin-top:40px;text-align:right;word-spacing:normal;}
