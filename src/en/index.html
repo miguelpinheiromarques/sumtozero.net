@@ -5,7 +5,7 @@ path: home
 translationKey: "home"
 pagination:
   data: collections.posts_en 
-  size: 1          
+  size: 6          
   permalink: "en/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}index.html"
 ---
 
@@ -24,7 +24,7 @@ pagination:
             </h2>
             <p>
                 <time>
-                    {{ post.date | readableDate }}
+                    <time datetime="{{ post.date }}">{{ post.date | readableDate(lang) }}</time>
                     by
                     <a>{{ post.data.author }}</a>
 
