@@ -17,6 +17,16 @@ module.exports = function (eleventyConfig) {
 
   // Redirect to homepage  
   eleventyConfig.addPassthroughCopy("src/_redirects");  
+
+  // Create a collection for English posts only
+  eleventyConfig.addCollection("posts_en", function(collectionApi) {
+    return collectionApi.getFilteredByTag("posts").filter(item => item.data.lang === "en");
+  });
+
+  // Create a collection for Spanish posts only
+  eleventyConfig.addCollection("posts_es", function(collectionApi) {
+    return collectionApi.getFilteredByTag("posts").filter(item => item.data.lang === "es");
+  });
   
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
