@@ -22,14 +22,7 @@ pagination:
                     {% endif %}
                 </a>
             </h2>
-            <p>
-                <time>
-                    <time datetime="{{ post.date }}">{{ post.date | readableDate(lang) }}</time>
-                    por
-                    <a>{{ post.data.author }}</a>
-
-                </time>
-            </p>
+            <p><time datetime="{{ post.date }}">{{ post.date | readableDate(lang) }}</time></p>
             {% if post.data.description %}
                 <p>
                     {{ post.data.description }}
