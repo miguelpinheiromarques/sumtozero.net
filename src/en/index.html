@@ -13,8 +13,7 @@ pagination:
 
 {% set currentPosts = collections["posts_" + lang] %}
 
-{% for post in pagedPosts | reverse %}
-
+{% for post in pagedPosts %}
         <article>
             <h2>
                 <a href="{{ post.url | url }}">
