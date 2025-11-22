@@ -14,16 +14,26 @@
 				</svg>
 			</div>
 		</div>
+		
+<nav class="main-nav">
+  <ul>    
+    {% for item in navigation %}
+      
+      {% set currentUrl = item.urls[lang] %}
+      {% set currentLabel = item.labels[lang] %}
 
+      {% set isActive = (page.url == currentUrl) %}
 
-           <nav>
-                <ul>
-                        <li>
-							<a href="/{{ lang }}/">{{ 'home' | t }}</a>
-							<a href="/{{ lang }}/about.html">{{ 'about' | t }}</a>
-							<a href="/{{ lang }}/contact.html">{{ 'contact' | t }}</a>							
-                        </li>
-                </ul>
-    </nav>
-<hr/>
+      <li>
+        <a href="{{ currentUrl }}" {% if isActive %}aria-current="page" class="active"{% endif %}>
+          {{ currentLabel }}
+        </a>
+      </li>
+
+    {% endfor %}
+
+  </ul>
+</nav>
+		
+	<hr/>
 	</header>
