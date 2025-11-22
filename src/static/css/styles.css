@@ -9,24 +9,18 @@ html {
 }
 
 body {
-	background-color: color-mix(in srgb, Canvas, CanvasText 2.5%);
+	background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 2.5%), Canvas);
 	color: color-mix(in srgb, CanvasText, Canvas 2.5%);
 }
 
-@media (prefers-color-scheme: dark) {body{background-color: Canvas;}}
-
 ::-moz-selection {
-	color: Canvas;
+	color: light-dark(Canvas, CanvasText);
 	background: AccentColor;
 }
 
 ::selection {
-	color: Canvas;
+	color: light-dark(Canvas, CanvasText);
 	background: AccentColor;
-}
-@media (prefers-color-scheme: dark) {
-	::-moz-selection {color: CanvasText;}
-	::selection {color: CanvasText;}	
 }
 
 section,
@@ -99,11 +93,9 @@ a:visited {
 }
 
 a:hover {
-	background-color: color-mix(in srgb, AccentColor, CanvasText 15%);
+	background-color: light-dark(color-mix(in srgb, AccentColor, CanvasText 15%), CanvasText);
 	text-decoration:none;
 }
-
-@media (prefers-color-scheme: dark) {a,a:visited {color: CanvasText;}}
 
 section a,section a:visited {color:CanvasText;background-color:transparent;padding:0;border-radius:0;font-weight:600}
 section a:hover{color:CanvasText;background-color:transparent;text-decoration:underline}
@@ -209,7 +201,7 @@ input {
 	width: 100%;
 	height: 30px;
 	margin: 4px 0 10px 0;
-	background: light-dark(color-mix(in srgb, Canvas, CanvasText 4%), color-mix(in srgb, Canvas, CanvasText 10%));
+	background: light-dark(color-mix(in srgb, Canvas, CanvasText 4%), color-mix(in srgb, Canvas, CanvasText 1%));
 	border: 0;
 	outline: 0;
 	padding-left: 10px;
@@ -219,7 +211,7 @@ textarea {
 	width: 100%;
 	min-height: 200px;
 	margin: 0;
-	background: light-dark(color-mix(in srgb, Canvas, CanvasText 4%), color-mix(in srgb, Canvas, CanvasText 10%));
+	background: light-dark(color-mix(in srgb, Canvas, CanvasText 4%), color-mix(in srgb, Canvas, CanvasText 1%));
 	border: 0;
 	outline: 0;
 	resize: none;
