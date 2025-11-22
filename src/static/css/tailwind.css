@@ -1,15 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/*Your Custom CSS Goes here*/
-
-h1 {
-  @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+:root {
+	 --font-mono: "IBM Plex Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
+html {
+	scroll-behavior: smooth;
+	color-scheme: light dark;
+}
+html:has(#mode-switcher [value="light"]:checked) { color-scheme: light }
+html:has(#mode-switcher [value="dark"]:checked){ color-scheme: dark; }
 
-h3 {
-  @apply text-2xl font-bold mb-3;
+body {
+	 background-color: color-mix(in srgb, Canvas, CanvasText 2.5%);
+	 color: color-mix(in srgb, CanvasText, Canvas 2.5%);
 }
 
 ::-moz-selection {
@@ -22,7 +23,7 @@ h3 {
 }
 
 body{
-	font-family: "IBM Plex Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	font-family: font-family: var(--font-mono);
 	font-size: clamp(0.95rem, 1.095rem + -0.227vw, 1.05rem);
 	letter-spacing: 0;
 }
@@ -34,11 +35,4 @@ body{
 .logo svg{
 	width:50px;
 	height:auto;
-}
-
-/* Syntax Highlighting*/
-
-body :not(pre) > code[class*="language-"],
-body pre[class*="language-"] {
-  @apply bg-gray-800;
 }
