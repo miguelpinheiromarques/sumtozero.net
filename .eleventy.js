@@ -24,8 +24,8 @@ module.exports = function (eleventyConfig) {
   });
 
   // Create a collection for Spanish posts only
-  eleventyConfig.addCollection("posts_es", function(collectionApi) {
-    return collectionApi.getFilteredByTag("posts").filter(item => item.data.lang === "es");
+  eleventyConfig.addCollection("posts_pt", function(collectionApi) {
+    return collectionApi.getFilteredByTag("posts").filter(item => item.data.lang === "pt");
   });
   
   // Disable automatic use of your .gitignore
