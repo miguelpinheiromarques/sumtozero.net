@@ -6,13 +6,12 @@ translationKey: "home"
 pagination:
   data: collections.posts_en 
   size: 1          
-  alias: pagedPosts
   permalink: "en/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
 <section class="posts">
 
-{% for post in pagedPosts %}
+{% for post in pagination.items %}
         <article>
             <h2>
                 <a href="{{ post.url | url }}">
