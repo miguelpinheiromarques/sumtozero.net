@@ -260,13 +260,12 @@ button svg {
 	padding: 0;
 	margin-left: 0.8rem;
 	margin-top: -1px;
+	color:light-dark(Canvas,CanvasText);
 }
 
 button svg path {
-	fill: Canvas
+	fill: light-dark(Canvas,CanvasText)
 }
-
-@media (prefers-color-scheme: dark) {button {color: CanvasText;}button svg path{fill:CanvasText}}
 
 header {
 	margin-top: 4rem;
@@ -294,6 +293,8 @@ header {
 	width: 50px;
 	height: auto;
 }
+
+.heading svg path{fill:light-dark(CanvasText,CanvasText)}
 
 .heading .h4 {
 	margin-top: 0;
