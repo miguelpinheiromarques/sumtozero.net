@@ -47,4 +47,25 @@ pagination:
 
         </article>
     {% endfor %}
+  
+<nav class="pagination" aria-label="Pagination">
+  <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+    
+    {# 'href.previous' is the URL for the previous page (e.g. going from page 2 back to 1) #}
+    <div class="prev">
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}">{{ 'newer_posts' | t }}</a>
+      {% endif %}
+    </div>
+
+    {# 'href.next' is the URL for the next page #}
+    <div class="next">
+      {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}">{{ 'older_posts' | t }}</a>
+      {% endif %}
+    </div>
+    
+  </div>
+</nav>
+  
 </section>
