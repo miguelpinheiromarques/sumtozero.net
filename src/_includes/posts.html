@@ -6,10 +6,9 @@ layout: default
     <div>
         <h1>{{title}}</h1>
         <p>
-            <time> {{ date | readableDate }}
-                by
-                <a>{{ author }}</a>
-            </time>
+<p class="post-date">
+  {{ page.date | readableDate(lang) }}
+</p>
         </p>
 
     </div>
