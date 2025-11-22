@@ -1,4 +1,12 @@
 module.exports = {
+  title: {
+	en: "sum to zero",
+	pt: "sum to zero"
+  },
+  tagline: {
+	en: "digital home of miguel pinheiro marques",
+	pt: "página pessoal de miguel pinheiro marques"
+  },	
   home: {
 	en: "Home",
 	pt: "Início"
