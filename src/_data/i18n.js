@@ -15,6 +15,14 @@ module.exports = {
     en: "← Previous Post",
     pt: "← Artigo Anterior"
   },
+newer_posts: {
+    en: "← Newer Posts",
+    pt: "← Artigos Mais Recentes"
+  },
+  older_posts: {
+    en: "Older Posts →",
+    pt: "Artigos Mais Antigos →"
+  },	
   home: {
 	en: "Home",
 	pt: "Início"
