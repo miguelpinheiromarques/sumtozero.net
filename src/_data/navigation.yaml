@@ -1,8 +1,8 @@
 ---
 items:
+  - text: About
+    url: "/"
   - text: Blog
     url: "/blog"
-  - text: Home
-    url: "/"
   - text: Contact
     url: "/contact.html"
