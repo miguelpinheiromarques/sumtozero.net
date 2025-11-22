@@ -3,21 +3,38 @@
 	<div class="lang-switch">
 		{% if lang == "en" %}
 		  {% set targetLang = "pt" %}
-		  {% set label = "Português" %}
+		  {% set label = "PT" %}
 		{% else %}
 		  {% set targetLang = "en" %}
-		  {% set label = "English" %}
+		  {% set label = "EN" %}
 		{% endif %}
 		
 		{% set translatedUrl = "" %}
 		
 		{% if pagination and pagination.hrefs %}
-		  
 		  {% if pagination.pageNumber == 0 %}
 		    {% set translatedUrl = "/" + targetLang + "/" %}
 		  {% else %}
 		    {% set translatedUrl = "/" + targetLang + "/" + pagination.pageNumber + "/" %}
 		  {% endif %}
+		
+		{% elif '/tags/' in page.url %}		  
+		  {% set translatedTag = tag %} {# Default: assume tag is same (e.g. "CSS") #}
+		  
+		  {% if lang == "en" %}
+		    {% if tag_translations[tag] %}
+		      {% set translatedTag = tag_translations[tag] %}
+		    {% endif %}
+		    
+		  {% else %}
+		    {% for enTag, ptTag in tag_translations %}
+		      {% if ptTag == tag %}
+		        {% set translatedTag = enTag %}
+		      {% endif %}
+		    {% endfor %}
+		  {% endif %}
+		
+		  {% set translatedUrl = "/" + targetLang + "/tags/" + (translatedTag | slugify) + "/" %}
 		
 		{% else %}
 		  {% set translatedUrl = translationKey | getLocalizedUrl(targetLang, collections.all) %}
