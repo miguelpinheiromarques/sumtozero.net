@@ -3,6 +3,7 @@ const { DateTime } = require("luxon");
 const htmlmin = require("html-minifier");
 const { I18nPlugin } = require("@11ty/eleventy");
 const i18n = require('./src/_data/i18n.js');
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   // Set your primary language
@@ -90,6 +91,9 @@ eleventyConfig.addCollection("posts_pt", function(collectionApi) {
 
   // Copy robots to route of /_site  
   eleventyConfig.addPassthroughCopy("./src/static/robots.txt");  
+
+  // Add RSS plugin
+  eleventyConfig.addPlugin(pluginRss);  
 
   // Add the global variable "year"
   eleventyConfig.addGlobalData("year", () => {
