@@ -33,7 +33,7 @@ body,p,a,h1,h2,h3,h4,form,button,input,textarea,input::placeholder,textarea::pla
 	color: color-mix(in srgb, CanvasText, Canvas 2.5%);
 }
 @supports (font: -apple-system-body){
-	body,p,a,h1,h2,h3,h4,form,button,input,textarea,input::placeholder,textarea::placeholder,#menu{letter-spacing: -0.011em;}
+	body,p,a,h1,h2,h3,h4,form,button,input,textarea,input::placeholder,textarea::placeholder{letter-spacing: -0.011em;}
 }
 .column {
 	display: flex;
@@ -68,9 +68,11 @@ section svg{
 	margin-left:1rem;
 }
 section svg path{fill:#f9f9f9;}
+
 nav {}
 nav ul{list-style-type: none;}
-nav ul li{display:inline;}
+nav ul li{display:inline;margin-right:1rem;}
+
 p {
 	 line-height: calc(1ex / 0.32);
 	 margin: calc(1ex / 0.32) 0;
@@ -106,7 +108,7 @@ h3 {
 	 text-transform:lowercase;
 	 color:color-mix(in srgb, CanvasText, Canvas 50%);
 }
-#top,#credits,#about,#contact{
+#about,#credits,#acoustics,#book,#contact{
 	scroll-margin-top: 2rem;
 }
 form{
