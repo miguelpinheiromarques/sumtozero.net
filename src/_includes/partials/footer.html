@@ -2,10 +2,10 @@
 	<div class="lang-switch">
 		{% if lang == "en" %}
 		  {% set targetLang = "pt" %}
-		  {% set label = "PT" %}
+		  {% set label = "Português" %}
 		{% else %}
 		  {% set targetLang = "en" %}
-		  {% set label = "EN" %}
+		  {% set label = "English" %}
 		{% endif %}
 		
 		{% set translatedUrl = "" %}
@@ -15,16 +15,14 @@
 		  {% if pagination.pageNumber == 0 %}
 		    {% set translatedUrl = "/" + targetLang + "/" %}
 		  {% else %}
-		    {% set translatedUrl = "/" + targetLang + "/" + (pagination.pageNumber + 1) + "/" %}
+		    {% set translatedUrl = "/" + targetLang + "/" + pagination.pageNumber + "/" %}
 		  {% endif %}
 		
 		{% else %}
 		  {% set translatedUrl = translationKey | getLocalizedUrl(targetLang, collections.all) %}
 		{% endif %}
 		
-		<a href="{{ translatedUrl if translatedUrl else '/' + targetLang + '/' }}" class="lang-toggle">
-		  {{ label }}
-		</a>
+		<a href="{{ translatedUrl if translatedUrl else '/' + targetLang + '/' }}" class="lang-toggle">{{ label }}</a>
 	</div>
 	<small>&copy; 2010-{{year}} {{settings.author}}. All rights reserved.</small>
 </footer>
