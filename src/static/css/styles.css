@@ -260,5 +260,5 @@
 	footer svg path{
 		fill: color-mix(in srgb, CanvasText, Canvas 40%)
 	}	
-ul.lang-switch{display:inline;text-align:right;list-style-type: none;}
-ul.lang-switch li{margin-left:2rem;}
+.lang-switch ul{display:inline;text-align:right;list-style-type: none;}
+.lang-switch ul li{margin-left:2rem;display:inline;}
