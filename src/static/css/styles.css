@@ -294,7 +294,8 @@ header {
 	height: auto;
 }
 
-.heading svg path{fill:light-dark(CanvasText,CanvasText)}
+.heading svg path.logo-fill{fill:light-dark(CanvasText,CanvasText)}
+.heading svg path.logo-stroke{stroke:light-dark(CanvasText,CanvasText)}
 
 .heading .h4 {
 	margin-top: 0;
