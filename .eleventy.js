@@ -51,10 +51,26 @@ eleventyConfig.addCollection("posts_pt", function(collectionApi) {
   eleventyConfig.setDataDeepMerge(true);
 
   // human readable date
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-      "dd LLL yyyy"
-    );
+    eleventyConfig.addFilter("readableDate", (dateObj, lang) => {
+    // 1. If date is missing, return empty
+    if (!dateObj) return "";
+
+    // 2. Map your short language codes to full locale codes
+    // 'pt' -> 'pt-PT' (Portugal) or 'pt-BR' (Brazil)
+    const localeMap = {
+      en: "en-US",
+      pt: "pt-PT" 
+    };
+
+    // 3. Get the correct locale (default to English if missing)
+    const locale = localeMap[lang] || "en-US";
+
+    // 4. Format the date using native JavaScript
+    return new Date(dateObj).toLocaleDateString(locale, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
   });
 
   // To Support .yaml Extension in _data
