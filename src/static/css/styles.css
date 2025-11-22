@@ -270,6 +270,8 @@ button svg path {
 	fill: Canvas
 }
 
+@media (prefers-color-scheme: dark) {button {color: CanvasText;}}
+
 header {
 	margin-top: 2rem;
 }
