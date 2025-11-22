@@ -12,8 +12,8 @@ pagination:
 <section class="posts">
 {% set currentPosts = collections["posts_" + lang] %}
 
-{% for post in pagedPosts | reverse %}
-        <article>
+{% for post in pagedPosts %}
+  <article>
             <h2>
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
