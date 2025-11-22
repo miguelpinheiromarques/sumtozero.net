@@ -5,9 +5,11 @@ path: home
 ---
 
 <section class="posts">
-    {% set postslist = collections.post %}
 
-    {% for post in postslist | reverse %}
+{% set currentPosts = collections["posts_" + lang] %}
+
+{% for post in currentPosts | reverse %}
+
         <article>
             <h2>
                 <a href="{{ post.url | url }}">
