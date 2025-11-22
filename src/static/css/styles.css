@@ -431,30 +431,23 @@ footer svg path {
 .post-tags {
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid #eee;
   font-size: 0.9rem;
 }
 
 .tag-link {
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 10%), color-mix(in srgb, Canvas, black 10%));
+  color: light-dark(CanvasText, CanvasText);
   padding: 2px 8px;
   border-radius: 4px;
   text-decoration: none;
   margin-left: 5px;
 }
 
-.tag-link:hover {
-  background-color: #ddd;
-}
-
 .rss-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px; /* Space between icon and text */
   text-decoration: none;
-  color: #555; /* Adjust to your text color */
-  transition: color 0.2s ease;
+  color: CanvasText;
 }
 
 .rss-link:hover {
