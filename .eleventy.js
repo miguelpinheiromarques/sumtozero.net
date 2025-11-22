@@ -29,6 +29,7 @@ module.exports = function (eleventyConfig) {
     "./node_modules/alpinejs/dist/cdn.min.js": "./static/js/alpine.js",
   });
 
+  // Copy CSS to route of /_site  
   eleventyConfig.addPassthroughCopy("./src/static/css");
   
   // Copy Image Folder to /_site
@@ -36,6 +37,11 @@ module.exports = function (eleventyConfig) {
 
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("./src/favicon.svg");  
+  eleventyConfig.addPassthroughCopy("./src/apple-touch-icon.png");  
+
+  // Copy robots to route of /_site  
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");  
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
