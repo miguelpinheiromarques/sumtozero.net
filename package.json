@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0", 
+    "@11ty/eleventy-plugin-rss": "^1.2.0",    
     "browser-sync": "^2.27.7",
     "cross-env": "^7.0.3",
     "html-minifier": "^4.0.0",
