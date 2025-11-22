@@ -27,7 +27,6 @@ section,
 header,
 footer {
 	margin: 0 1rem;
-
 	@media screen and (min-width: 48em) {
 		margin: 0 20%;
 	}
@@ -54,7 +53,6 @@ textarea::placeholder,
 }
 
 @supports (font: -apple-system-body) {
-
 	body,
 	p,
 	a,
@@ -100,8 +98,8 @@ a:hover {
 	text-decoration:none;
 }
 
-section a,section a:visited {background-color:transparent;padding:0;border-radius:0;font-weight:600}
-section a:hover{background-color:transparent;text-decoration:underline}
+section a,section a:visited {color:CanvasText;background-color:transparent;padding:0;border-radius:0;font-weight:600}
+section a:hover{color:CanvasText;background-color:transparent;text-decoration:underline}
 
 section svg {
 	color: Canvas;
