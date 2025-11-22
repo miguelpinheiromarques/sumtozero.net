@@ -193,10 +193,6 @@ header{
 	margin-top:0.35rem;
 	word-spacing:100vw;
 }
-.hero{
-	margin:2rem 0;
-	padding:0
-}
 .hero img{
 	width:100%;
 	height:auto;
@@ -263,8 +259,6 @@ nav{
 	background-color:light-dark(color-mix(in srgb, Canvas, CanvasText 4%), color-mix(in srgb, Canvas, CanvasText 10%));
 	border-radius:1rem;
 	padding:3px 0 4px 0;
-	width:100%;
-	text-align:right;
 }
 nav a{
 	color:color-mix(in srgb, CanvasText, Canvas 50%) !important;
