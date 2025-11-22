@@ -15,11 +15,11 @@
 	}
 	::-moz-selection {
 		color: Canvas;
-		background: AccentColor);
+		background: AccentColor;
 	}
 	::selection {
 		color: Canvas;
-		background: var(--accent);
+		background: AccentColor;
 	}
 	section,header,footer{
 		margin: 0 1rem;
@@ -148,7 +148,7 @@
 		-webkit-font-smoothing: antialiased;
 	}
 	button{
-		background-color:var(--accent);
+		background-color:AccentColor;
 		-webkit-appearance: none;
 		border:0;
 		outline:0;
@@ -216,7 +216,7 @@
 	}
 	.about span{font-style:italic;}
 	.about p a, .about p a:visited{
-		color:var(--accent);
+		color:AccentColor;
 		text-decoration:none;
 		border-radius:0;
 		padding:0;
@@ -243,7 +243,7 @@
 	}
 	.thankyou{
 		color:color-mix(in srgb, Canvas, CanvasText 2.5%);
-		background-color:var(--accent);
+		background-color:AccentColor;
 		margin-top:2rem;
 		padding:0.5rem;
 		border-radius:0.5rem;
