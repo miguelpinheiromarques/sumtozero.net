@@ -10,12 +10,13 @@ pagination:
   permalink: "en/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
-{# DEBUG: This will print the number of posts found. If it says 0, the collection is empty. #}
-<p><strong>Debug:</strong> Found {{ pagedPosts.length }} posts on this page.</p>
-
 <section class="posts">
 
 {% for post in pagedPosts %}
+
+  {# DEBUG: This will print the number of posts found. If it says 0, the collection is empty. #}
+<p><strong>Debug:</strong> Found {{ pagedPosts.length }} posts on this page.</p>
+  
         <article>
             <h2>
                 <a href="{{ post.url | url }}">
