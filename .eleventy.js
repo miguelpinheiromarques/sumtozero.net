@@ -24,7 +24,7 @@ eleventyConfig.addCollection("posts_en", function(collectionApi) {
   );
 });
 
-eleventyConfig.addCollection("posts_es", function(collectionApi) {
+eleventyConfig.addCollection("posts_pt", function(collectionApi) {
   return collectionApi.getAll().filter(item => 
     item.url.startsWith("/pt/posts/") && !item.url.endsWith("/posts/")
   );
