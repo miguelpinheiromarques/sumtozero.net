@@ -1,13 +1,14 @@
 <footer>
-	<ul class="lang-switch">
-	  {% if lang == "en" %}
-	    <li><span aria-current="page">EN</span></li>
-	    <li><a href="/pt{{ page.url | replace('/en/', '/') }}">PT</a></li>
-	  {% else %}
-	    <li><a href="/en{{ page.url | replace('/pt/', '/') }}">EN</a></li>
-	    <li><span aria-current="page">PT</span></li>
-	  {% endif %}
-	</ul>
-	
+	<div class="lang-switch">
+		<ul>
+		  {% if lang == "en" %}
+		    <li><span aria-current="page">EN</span></li>
+		    <li><a href="/pt{{ page.url | replace('/en/', '/') }}">PT</a></li>
+		  {% else %}
+		    <li><a href="/en{{ page.url | replace('/pt/', '/') }}">EN</a></li>
+		    <li><span aria-current="page">PT</span></li>
+		  {% endif %}
+		</ul>
+	</div>
 	<small>&copy; 2010-{{year}} {{settings.author}}. All rights reserved.</small>
 </footer>
