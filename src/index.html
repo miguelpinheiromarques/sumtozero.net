@@ -4,12 +4,12 @@ title: Sum to Zero - a blog by Miguel Pinheiro Marques, mastering engineer
 path: home
 ---
 
-<section class="mt-15">
+<section class="posts">
     {% set postslist = collections.post %}
 
     {% for post in postslist | reverse %}
-        <article class="my-8">
-            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+        <article>
+            <h2>
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
                         {{ post.data.title }}
@@ -18,7 +18,7 @@ path: home
                     {% endif %}
                 </a>
             </h2>
-            <p class="text-base leading-6 text-gray-500 mb-3">
+            <p>
                 <time>
                     {{ post.date | readableDate }}
                     by
@@ -27,13 +27,13 @@ path: home
                 </time>
             </p>
             {% if post.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
+                <p>
                     {{ post.data.description }}
                 </p>
             {% endif %}
 
             <p>
-                <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
+                <a href="{{ post.url | url }}">
                     Read more →
                 </a>
             </p>
