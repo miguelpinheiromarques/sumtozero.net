@@ -279,8 +279,9 @@ header {
 .heading h1 {
 	line-height: 2rem;
 	margin: 0;
-	font-weight: 700;
+	font-weight: 600;
 	word-spacing: -0.5rem;
+	text-trasnform:uppercase;
 	
 }
 
