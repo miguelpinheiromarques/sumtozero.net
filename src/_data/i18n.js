@@ -5,10 +5,10 @@ module.exports = {
   },
   about: {
 	en: "About",
-	pt: "Sobre nosotros"
+	pt: "Sobre"
   },
   select_language: {
 	en: "Select Language",
-	pt: "Seleccionar idioma"
+	pt: "Selecionar idioma"
   }
 };
