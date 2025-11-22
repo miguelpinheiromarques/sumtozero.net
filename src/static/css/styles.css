@@ -435,20 +435,19 @@ footer svg path {
 }
 
 .tag-link {
-  background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 5%), color-mix(in srgb, Canvas, black 25%));
+  background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 5%), color-mix(in srgb, Canvas, black 50%));
   color: light-dark(CanvasText, CanvasText);
   padding: 2px 8px;
   border-radius: 4px;
   text-decoration: none;
   margin-left: 5px;
 }
-
+.rss a{background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 5%), color-mix(in srgb, Canvas, black 50%));}
 .rss-link {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   color: CanvasText;
-  background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 5%), color-mix(in srgb, Canvas, black 25%));
 }
 
 .rss-link:hover {
