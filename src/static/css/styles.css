@@ -426,3 +426,22 @@ footer svg path {
 .nav-title {
 	font-size: 1.1em;
 }
+.post-tags {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.tag-link {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.tag-link:hover {
+  background-color: #ddd;
+}
