@@ -14,6 +14,9 @@ module.exports = function (eleventyConfig) {
     const lang = this.page.lang || 'en'; // Detect current page language
     return i18n[key][lang] || key; // Return translation or the key itself if missing
   });
+
+  // Redirect to homepage  
+  eleventyConfig.addPassthroughCopy("src/_redirects");  
   
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
