@@ -69,7 +69,8 @@ section svg{
 }
 section svg path{fill:#f9f9f9;}
 nav {}
-nav ul{display:inline}
+nav ul{list-style-type: none;}
+nav ul li{display:inline;}
 p {
 	 line-height: calc(1ex / 0.32);
 	 margin: calc(1ex / 0.32) 0;
