@@ -88,7 +88,6 @@ a:visited {
 	border-radius: 0.25rem;
 	padding: 0.2rem 0.5rem;
 	background-color: AccentColor;
-	transition: 0.2s;
 	letter-spacing: -0.011em;
 	word-spacing: -0.011em;
 	font-weight: 400;
@@ -242,7 +241,6 @@ button {
 	cursor: pointer;
 	padding: 0.2rem 0.7rem;
 	border-radius: 0.5rem;
-	transition: .2s;
 	margin-top: 10px;
 	color: Canvas;
 	text-transform: lowercase;
@@ -335,7 +333,6 @@ section.credits {
 	border-radius: 0;
 	padding: 0;
 	background-color: color-mix(in srgb, Canvas, CanvasText 2.5%);
-	transition: 0.2s;
 	letter-spacing: -0.011em;
 	word-spacing: -0.011em;
 	font-weight: 600;
