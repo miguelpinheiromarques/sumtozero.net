@@ -1,6 +1,6 @@
-:root {
-		 --font-mono: "IBM Plex Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-	--accent:#4e77f6;
+	:root {
+		--font-mono: "IBM Plex Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+		--accent:#4e77f6;
 	}
 	html {
 		scroll-behavior: smooth;
@@ -15,7 +15,7 @@
 	}
 	::-moz-selection {
 		color: Canvas;
-		background: var(--accent);
+		background: AccentColor);
 	}
 	::selection {
 		color: Canvas;
@@ -49,7 +49,7 @@
 		text-decoration:none;
 		border-radius:0.25rem;
 		padding:0.2rem 0.5rem;
-		background-color:var(--accent);
+		background-color:AccentColor;
 		transition: 0.2s;
 		letter-spacing: -0.011em;
 		word-spacing:-0.011em;
@@ -76,7 +76,7 @@
 	.main-nav ul li a {font-size:0.8rem;text-transform:uppercase;font-weight:600}
 	.main-nav ul li a[aria-current="page"],
 	.main-nav ul li a.active {
-	  background-color: color-mix(in srgb, Canvas, CanvasText 2.5%);
+	  background-color: color-mix(in srgb, AccentColor, CanvasText 2.5%);
 	}
 	
 	p {
