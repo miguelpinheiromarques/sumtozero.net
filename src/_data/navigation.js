@@ -18,7 +18,7 @@ module.exports = [
 	},
 	urls: {
 	  en: "/en/about/",
-	  pt: "/pt/sobre/"   // Your custom permalink
+	  pt: "/pt/sobre/"   
 	}
   },
   {
@@ -29,7 +29,7 @@ module.exports = [
 	},
 	urls: {
 	  en: "/en/contact/",
-	  pt: "/pt/contato/"
+	  pt: "/pt/contacto/"
 	}
   }
 ];
