@@ -435,7 +435,7 @@ footer svg path {
 }
 
 .tag-link {
-  background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 5%), color-mix(in srgb, Canvas, black 50%));
+  background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 5%), color-mix(in srgb, Canvas, CanvasText 10%));
   color: light-dark(CanvasText, CanvasText);
   padding: 2px 8px;
   border-radius: 4px;
