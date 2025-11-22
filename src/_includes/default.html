@@ -8,6 +8,19 @@
     {% if description %}<meta name="description" content="{{description}}"/>{% endif %}
     {% block head %}{% endblock %}
 
+{% set supportedLanguages = ["en", "pt"] %}
+{% for code in supportedLanguages %}
+  {% set localizedUrl = translationKey | getLocalizedUrl(code, collections.all) %}  
+  {% if localizedUrl %}
+    <link rel="alternate" hreflang="{{ code }}" href="{{ site.url }}{{ localizedUrl }}" />
+  {% endif %}
+{% endfor %}
+
+{% set defaultUrl = translationKey | getLocalizedUrl("en", collections.all) %}
+{% if defaultUrl %}
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ defaultUrl }}" />
+{% endif %}	
+
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<link rel="icon" href="/favicon.ico" sizes="32x32">
