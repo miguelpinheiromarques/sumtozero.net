@@ -1,8 +1,14 @@
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const htmlmin = require("html-minifier");
+const { I18nPlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
+  // Set your primary language
+  eleventyConfig.addPlugin(I18nPlugin, {
+    defaultLanguage: "en",
+  });
+  
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
