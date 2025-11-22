@@ -434,7 +434,7 @@ footer svg path {
   font-size: 0.9rem;
 }
 
-.tag-link {
+a.tag-link {
   background-color: color-mix(in srgb, Canvas, CanvasText 5%);
   color: CanvasText;
   padding:0.5rem;
@@ -444,7 +444,7 @@ footer svg path {
   font-size:0.85rem;
   text-transform:lowercase;
 }
-.tag-link:hover {
+a.tag-link:hover {
   background-color: color-mix(in srgb, Canvas, CanvasText 5%);
   color: CanvasText;
 }
