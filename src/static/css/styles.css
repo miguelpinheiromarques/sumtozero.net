@@ -24,6 +24,10 @@ body {
 	color: Canvas;
 	background: AccentColor;
 }
+@media (prefers-color-scheme: dark) {
+	::-moz-selection {color: CanvasText;}
+	::selection {color: CanvasText;}	
+}
 
 section,
 header,
