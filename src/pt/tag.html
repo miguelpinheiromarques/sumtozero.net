@@ -21,7 +21,6 @@ eleventyComputed:
 
   {% for post in taglist %}
     
-    {# SAFETY CHECK: Only show Portuguese posts #}
     {% if post.data.lang == "pt" %}
       <article>
         <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
