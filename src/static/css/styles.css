@@ -247,6 +247,7 @@
 	#thankyou:target{
 		 display:block;
 	}
+	footer{padding-bottom:4rem;}
 	footer p{
 		color: color-mix(in srgb, CanvasText, Canvas 50%);
 		font-size:0.8rem;
@@ -260,6 +261,6 @@
 	footer svg path{
 		fill: color-mix(in srgb, CanvasText, Canvas 40%)
 	}	
-.lang-switch{float:right}
-.lang-switch ul{display:inline;text-align:right;list-style-type: none;}
-.lang-switch ul li{margin-left:2rem;display:inline;}
+	.lang-switch{float:right}
+	.lang-switch ul{display:inline;text-align:right;list-style-type: none;}
+	.lang-switch ul li{margin-left:2rem;display:inline;}
