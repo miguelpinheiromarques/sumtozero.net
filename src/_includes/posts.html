@@ -18,3 +18,31 @@ layout: default
     </article>
 
 </section>
+
+{% set currentCollection = collections["posts_" + lang] %}
+
+{% set nextPost = currentCollection | getNextCollectionItem(page) %}
+{% set prevPost = currentCollection | getPreviousCollectionItem(page) %}
+
+<hr />
+<nav class="post-navigation" aria-label="Post Navigation">
+  
+  <div class="nav-prev">
+    {% if prevPost %}
+      <a href="{{ prevPost.url }}">
+        <span class="nav-label">{{ 'previous_post' | t }}</span><br>
+        <span class="nav-title">{{ prevPost.data.title }}</span>
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="nav-next">
+    {% if nextPost %}
+      <a href="{{ nextPost.url }}">
+        <span class="nav-label">{{ 'next_post' | t }}</span><br>
+        <span class="nav-title">{{ nextPost.data.title }}</span>
+      </a>
+    {% endif %}
+  </div>
+
+</nav>
