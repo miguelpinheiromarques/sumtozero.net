@@ -27,12 +27,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
   // Copy favicon to route of /_site
-  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
-  eleventyConfig.addPassthroughCopy("./src/favicon.svg");  
-  eleventyConfig.addPassthroughCopy("./src/apple-touch-icon.png");  
+  eleventyConfig.addPassthroughCopy("./src/static/favicon.ico");
+  eleventyConfig.addPassthroughCopy("./src/static/favicon.svg");  
+  eleventyConfig.addPassthroughCopy("./src/static/apple-touch-icon.png");  
 
   // Copy robots to route of /_site  
-  eleventyConfig.addPassthroughCopy("./src/robots.txt");  
+  eleventyConfig.addPassthroughCopy("./src/static/robots.txt");  
 
   // Add the global variable "year"
   eleventyConfig.addGlobalData("year", () => {
