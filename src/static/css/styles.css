@@ -170,12 +170,11 @@ button svg{
 	margin-left:0.8rem;
 	margin-top:-1px;
 }
-butto svg path{fill:#f9f9f9}
+button svg path{fill:#f9f9f9}
 header{
 	margin-top:2rem;
 }
 .heading h1{
-	word-spacing:100vw;
 	line-height:1.8rem;
 	margin:0;
 	font-weight:600
