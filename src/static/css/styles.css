@@ -43,7 +43,7 @@ body,p,a,h1,h2,h3,h4,form,button,input,textarea,input::placeholder,textarea::pla
 	margin:0;
 	padding:0;
 }
-section a, section a:visited{
+a, a:visited{
 	color:#f9f9f9;
 	text-decoration:none;
 	border-radius:0.5rem;
@@ -55,7 +55,7 @@ section a, section a:visited{
 	font-weight:400;
 	font-size:1rem;
 }
-section a:hover{
+a:hover{
 	background-color:#324ea6
 }
 section svg{
@@ -174,11 +174,10 @@ button svg path{fill:#f9f9f9}
 header{
 	margin-top:2rem;
 }
-.heading a h1{
+.heading h1{
 	line-height:1.8rem;
 	margin:0;
 	font-weight:600
-	text-decoration:none;
 }
 .heading{
 	display: flex;
