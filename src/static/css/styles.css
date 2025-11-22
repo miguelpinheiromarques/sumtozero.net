@@ -45,7 +45,7 @@
 		padding:0;
 	}
 	a, a:visited{
-		color:#f9f9f9;
+		color:color-mix(in srgb, Canvas, CanvasText 37%);
 		text-decoration:none;
 		border-radius:0.25rem;
 		padding:0.2rem 0.5rem;
@@ -57,10 +57,10 @@
 		font-size:1rem;
 	}
 	a:hover{
-		background-color:#324ea6
+		background-color: color-mix(in srgb, AccentColor, CanvasText 25%);
 	}
 	section svg{
-		color:#f9f9f9;
+		color:color-mix(in srgb, Canvas, CanvasText 37%);
 		width:14px;
 		height:14px;
 		line-height:14px;
@@ -68,7 +68,7 @@
 		margin-top:-4px;
 		margin-left:1rem;
 	}
-	section svg path{fill:#f9f9f9;}
+	section svg path{fill:color-mix(in srgb, Canvas, CanvasText 37%);}
 	
 	.main-nav {margin:0;padding:1rem 0;}
 	.main-nav ul{list-style-type: none;margin:0;padding:0;}
@@ -157,7 +157,7 @@
 		border-radius:0.5rem;
 		transition:.2s;
 		margin-top:10px;
-		color:#f9f9f9;
+		color:color-mix(in srgb, Canvas, CanvasText 37%);
 		text-transform:lowercase;
 		letter-spacing: -0.011em;
 		word-spacing:-0.011em;
@@ -178,7 +178,7 @@
 		margin-left:0.8rem;
 		margin-top:-1px;
 	}
-	button svg path{fill:#f9f9f9}
+	button svg path{fill:color-mix(in srgb, Canvas, CanvasText 37%)}
 	header{
 		margin-top:2rem;
 	}
