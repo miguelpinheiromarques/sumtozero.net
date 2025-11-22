@@ -76,7 +76,7 @@
 	.main-nav ul li a {font-size:0.8rem;text-transform:uppercase;font-weight:600}
 	.main-nav ul li a[aria-current="page"],
 	.main-nav ul li a.active {
-	  background-color: color-mix(in srgb, AccentColor, CanvasText 2.5%);
+	  background-color: color-mix(in srgb, AccentColor, CanvasText 25%);
 	}
 	
 	p {
