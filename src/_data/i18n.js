@@ -1,7 +1,7 @@
 module.exports = {
   title: {
-	en: "sum to zero",
-	pt: "sum to zero"
+	en: "Sum to Zero",
+	pt: "Sum to Zero"
   },
   tagline: {
 	en: "digital home of miguel pinheiro marques",
