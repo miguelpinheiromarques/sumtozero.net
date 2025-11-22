@@ -26,6 +26,15 @@ layout: default
   {% endif %}
 {% endfor %}
 
+<div class="post-tags">
+  <strong>Tags:</strong>
+  
+  {% for tag in tags %}    
+      <a href="/{{ lang }}/tags/{{ tag | slugify }}/" class="tag-link">
+        #{{ tag }}
+      </a>
+  {% endfor %}
+</div>
 <hr />
 <nav class="post-navigation" aria-label="Post Navigation">
   
