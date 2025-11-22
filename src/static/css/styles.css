@@ -138,7 +138,7 @@ section svg path {
 
 .main-nav ul li a[aria-current="page"],
 .main-nav ul li a.active {
-	background-color: color-mix(in srgb, AccentColor, Canvas 15%);
+	background-color: light-dark(color-mix(in srgb, AccentColor, white 15%),color-mix(in srgb, AccentColor, black 25%));
 }
 
 p {
