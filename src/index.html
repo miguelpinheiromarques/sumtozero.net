@@ -1,22 +1,94 @@
 ---
 layout: default
-title: Neat Starter
+title: Sum to Zero - a blog by Miguel Pinheiro Marques, mastering engineer
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-  </h1>
+	<section id="credits" class="credits">
+		<h2>Credits</h2>
+		<div class="h4">Some artists I've worked with</div>
+		<p>Mocky <span>//</span> Dora Morelenbaum <span>//</span> Jack Wall <span>//</span> x or size <span>//</span>
+			GNR <span>//</span> S. Pedro <span>//</span> Capitão Fausto <span>//</span> Mão Morta <span>//</span>
+			Glockenwise <span>//</span> Miguel Araújo <span>//</span> noiserv <span>//</span> Diabo na Cruz
+			<span>//</span> FEE. <span>//</span> Ana Moura <span>//</span> Bárbara Eugênia <span>//</span> Best Youth
+			<span>//</span> Fernando Daniel <span>//</span> Sean Riley & The Slowriders <span>//</span> Diogo Piçarra
+			<span>//</span> The Last Internationale <span>//</span> White Haus <span>//</span> Wolf Manhattan
+			<span>//</span> Rui Reininho <span>//</span> You Can’t Win, Charlie Brown <span>//</span> Três Tristes
+			Tigres <span>//</span> Edu Monteiro <span>//</span> The Black Mamba <span>//</span> Balla <span>//</span>
+			Ganso <span>//</span> Keep Razors Sharp <span>//</span> Salto <span>//</span> Sensible Soccers
+			<span>//</span> Manel Cruz <span>//</span> Cavaliers of Fun <span>//</span> Tó Trips <span>//</span>
+			Madrepaz <span>//</span> Isaura <span>//</span> Cláudia Pascoal <span>//</span> FRED <span>//</span> Os
+			Quatro e Meia <span>//</span> ÁTOA <span>//</span> Sunflowers <span>//</span> Orquestra Jazz Matosinhos
+			<span>//</span> Roger Plexico <span>//</span> Geleia Lenta <span>//</span> SirAiva <span>//</span> Filho da
+			Mãe <span>//</span> NAPA <span>//</span> Pedro Melo Alves <span>//</span> TOMARA <span>//</span> Inês de
+			Vasconcellos <span>//</span> bombazine <span>//</span> Angélica Salvi <span>//</span> Frankie Chavez
+			<span>//</span> Mirror People <span>//</span> LaBaq <span>//</span> Rui Massena <span>//</span> Virgem Suta
+			<span>//</span> Memória de Peixe <span>//</span> Diane Keaton <span>//</span> Jonas Myrin <span>//</span>
+			Inóspita...
+		</p>
+		<div class="h4"><a href="https://knurlmastering.com"
+				target="_blank">Credits at Knurl Mastering</a></div>
+	</section>
 
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
+	<section id="about" class="about">
+		<h2>Biography</h2>
+		<div class="h4">About me</div>
+		<p>Hi, I'm Miguel, a mastering engineer based in Porto, Portugal. I've been mastering records since 2010.
+			Throughout my career, I've had the privilege of working with both major and independent labels,
+			collaborating with emerging artists as well as established acts, and mastering a wide range of releases
+			across various genres.</p><p>I'm one of the founding members of <span>Estúdios Sá da Bandeira</span>, <span>Bender Mastering
+			Studio</span> and <span>Arda Recorders</span>, where I've had my mastering room
+			since the beginning of my career. I'm also the founder of <a href="https://knurlmastering.com"
+				target="_blank">Knurl Mastering</a>, where I currently master records.</p>
+		<div class="h4"><a href="https://instagram.com/miguel.pinheiro.marques" target="_blank">follow me on
+				Instagram</a></div>
+
+	</section>
+
+	<section id="contact" class="contact">
+		<hr />
+		<h2>Contact</h2>
+		<div class="h4">Get in touch with me</div>
+		<p>If you'd like to discuss your project or need information about pricing, demo availability, and lead times,
+			please get in touch with me. Fill out the form below, and I'll get back to you as soon as possible.</p>
+
+		<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+			<input type="hidden" name="access_key" value="44c30d37-f744-44c4-9a4c-d7626123961f" />
+			<input type="hidden" name="subject" value="Website Contact Form" />
+			<input type="hidden" name="from_name" value="miguelpinheiromarques.com" />
+			<input type="hidden" name="redirect" value="https://miguelpinheiromarques.com/index.html#thankyou">
+
+			<div class="form-group-container">
+				<div class="form-group">
+					<label for="name" class="form-label">Name *</label>
+					<input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
+				</div>
+				<div class="form-group">
+					<label for="email" class="form-label">Email *</label>
+					<input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
+				</div>
+				<div class="form-group">
+					<label for="phone" class="form-label">Phone</label>
+					<input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+				</div>
+				<div class="form-group">
+					<label for="message" class="form-label">Message *</label>
+					<textarea class="form-textarea" id="message" name="message" placeholder="Your message"
+						required></textarea>
+				</div>
+			</div>
+			<button class="form-submit" type="submit">Send message<svg xmlns="http://www.w3.org/2000/svg" width="24"
+					height="24" fill="#1f1f1f" viewBox="0 -960 960 960">
+					<path
+						d="M160-220v-520l616.92 260L160-220Zm40-60 474-200-474-200v155.38L393.85-480 200-435.38V-280Zm0 0v-400 400Z" />
+				</svg></button>
+		</form>
+
+		<div id="thankyou" class="thankyou">Message sent, thanks for getting in touch.</div>
+
+		<hr />
+	</section>
 
   {% include "./_includes/partials/content.html" %}
 </div>
