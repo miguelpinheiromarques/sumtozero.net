@@ -29,6 +29,20 @@ eleventyConfig.addCollection("posts_pt", function(collectionApi) {
     item.url.startsWith("/pt/posts/") && !item.url.endsWith("/posts/")
   );
 });
+
+// Filter to find a page by translationKey and language
+  eleventyConfig.addFilter("getLocalizedUrl", function(translationKey, targetLang, allPages) {
+    // If there is no translation key, we can't link them
+    if (!translationKey) return null;
+
+    // Search through ALL pages to find the match
+    const match = allPages.find(item => 
+      item.data.translationKey === translationKey && 
+      item.data.lang === targetLang
+    );
+    
+    return match ? match.url : null;
+  });
   
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
