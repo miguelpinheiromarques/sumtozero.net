@@ -1,5 +1,6 @@
 :root {
 		 --font-mono: "IBM Plex Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	--accent:#4e77f6;
 	}
 	html {
 		scroll-behavior: smooth;
@@ -14,11 +15,11 @@
 	}
 	::-moz-selection {
 		color: Canvas;
-		background: #4e77f6;
+		background: var(--accent);
 	}
 	::selection {
 		color: Canvas;
-		background: #4e77f6;
+		background: var(--accent);
 	}
 	section,header,footer{
 		margin: 0 1rem;
@@ -48,7 +49,7 @@
 		text-decoration:none;
 		border-radius:0.25rem;
 		padding:0.2rem 0.5rem;
-		background-color:#4e77f6;
+		background-color:var(--accent);
 		transition: 0.2s;
 		letter-spacing: -0.011em;
 		word-spacing:-0.011em;
@@ -75,7 +76,7 @@
 	.main-nav ul li a {font-size:0.8rem;text-transform:uppercase;font-weight:600}
 	.main-nav ul li a[aria-current="page"],
 	.main-nav ul li a.active {
-	  background-color: #f0f0f0;
+	  background-color: color-mix(in srgb, Canvas, CanvasText 2.5%);
 	}
 	
 	p {
@@ -147,7 +148,7 @@
 		-webkit-font-smoothing: antialiased;
 	}
 	button{
-		background-color:#4e77f6;
+		background-color:var(--accent);
 		-webkit-appearance: none;
 		border:0;
 		outline:0;
@@ -215,7 +216,7 @@
 	}
 	.about span{font-style:italic;}
 	.about p a, .about p a:visited{
-		color:#4e77f6;
+		color:var(--accent);
 		text-decoration:none;
 		border-radius:0;
 		padding:0;
@@ -242,7 +243,7 @@
 	}
 	.thankyou{
 		color:color-mix(in srgb, Canvas, CanvasText 2.5%);
-		background-color:#4e77f6;
+		background-color:var(--accent);
 		margin-top:2rem;
 		padding:0.5rem;
 		border-radius:0.5rem;
