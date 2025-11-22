@@ -14,21 +14,25 @@ eleventyComputed:
   title: "Artigos com a tag '{{ tag }}'"
 ---
 
-<h1>Artigos com a tag #{{ tag }}</h1>
+<section>
+  
+  <h1>Artigos com a tag #{{ tag }}</h1>
+  
+  <div class="post-list">
+    {% set taglist = collections[ tag ] %}
+  
+    {% for post in taglist %}
+      
+      {% if post.data.lang == "pt" %}
+        <article>
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <time>{{ post.date | readableDate(lang) }}</time>
+        </article>
+      {% endif %}
+  
+    {% endfor %}
+  </div>
+  
+  <p><a href="/pt/">← Voltar aos artigos</a></p>
 
-<div class="post-list">
-  {% set taglist = collections[ tag ] %}
-
-  {% for post in taglist %}
-    
-    {% if post.data.lang == "pt" %}
-      <article>
-        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-        <time>{{ post.date | readableDate(lang) }}</time>
-      </article>
-    {% endif %}
-
-  {% endfor %}
-</div>
-
-<p><a href="/pt/">← Voltar aos artigos</a></p>
+</section>
