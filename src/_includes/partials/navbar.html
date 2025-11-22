@@ -16,18 +16,14 @@
 		</div>
 
 
-       
-            {% if navigation.items %}
-    <nav>
+           <nav>
                 <ul>
-                    {% for item in navigation.items %}
                         <li>
-                            <a href="{{ item.url }}">{{ item.text }}</a>
+							<a href="/{{ lang }}/">{{ 'home' | t }}</a>
+							<a href="/{{ lang }}/">{{ 'about' | t }}</a>
+							<a href="/{{ lang }}/">{{ 'contact' | t }}</a>							
                         </li>
-                    {% endfor %}
                 </ul>
     </nav>
-            {% endif %}
-
 <hr/>
 	</header>
