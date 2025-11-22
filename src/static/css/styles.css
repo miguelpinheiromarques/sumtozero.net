@@ -97,7 +97,11 @@ a:visited {
 
 a:hover {
 	background-color: color-mix(in srgb, AccentColor, CanvasText 25%);
+	text-decoration:none;
 }
+
+section a,section a:visited {background-color:none;padding:0;border-radius:0;font-weight:600}
+section a:hover{background-color:none;text-decoration:underline}
 
 section svg {
 	color: Canvas;
