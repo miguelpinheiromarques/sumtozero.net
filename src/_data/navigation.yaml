@@ -1,6 +1,6 @@
 ---
 items:
-  - text: Blog
+  - text: Home
     url: "/"
   - text: About
     url: "/about.html"
