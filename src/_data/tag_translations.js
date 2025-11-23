@@ -1,4 +1,4 @@
 module.exports = {
   "Studio Installations": "Instalações em Estúdio",
-  "Audio": "Áudio"
+  "Wiring & Cables": "Cabos & Ligações"
 };
