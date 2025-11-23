@@ -318,33 +318,15 @@ section.credits {
 	color: light-dark(color-mix(in srgb, Canvas, CanvasText 10%), color-mix(in srgb, Canvas, CanvasText 20%))
 }
 
-.about h2 {
-	margin-top: 4rem;
+.about {
+	background-color:light-dark(color-mix(in srgb, CanvasText, Canvas 6%), color-mix(in srgb, Canvas, CanvasText 3%));
+	color:light-dark(Canvas,CanvasText);
+	padding:1rem;
+	border-radius:0.25rem;
 }
-
-.about span {
-	font-style: italic;
+.about p, .about .h4, .about h2{
+	color:light-dark(color-mix(in srgb, Canvas, CanvasText 2.5%),CanvasText);
 }
-
-.about p a,
-.about p a:visited {
-	color: AccentColor;
-	text-decoration: none;
-	border-radius: 0;
-	padding: 0;
-	background-color: color-mix(in srgb, Canvas, CanvasText 2.5%);
-	letter-spacing: -0.011em;
-	word-spacing: -0.011em;
-	font-weight: 600;
-	font-size: 1rem;
-	font-style: italic;
-	white-space: nowrap;
-}
-
-.about p a:hover {
-	text-decoration: underline
-}
-
 
 .contact .h4 {
 	margin-bottom: 2rem;
