@@ -4,8 +4,8 @@ module.exports = {
 	pt: "Sum to Zero"
   },
   tagline: {
-	en: "digital home of miguel pinheiro marques",
-	pt: "página pessoal de miguel pinheiro marques"
+	en: "a blog about audio, mastering, studio design & acoustics",
+	pt: "um blog sobre áudio, masterização, design de estúdios & acústica"
   },	
 	read_more: {
     en: "Read More →",
