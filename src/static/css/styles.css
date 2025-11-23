@@ -79,24 +79,6 @@ textarea::placeholder,
 	padding: 0;
 }
 
-a,
-a:visited {
-	color: light-dark(Canvas, CanvasText);
-	text-decoration: none;
-	border-radius: 0.25rem;
-	padding: 0.2rem 0.5rem;
-	background-color: AccentColor;
-	letter-spacing: -0.011em;
-	word-spacing: -0.011em;
-	font-weight: 400;
-	font-size: 1rem;
-}
-
-a:hover {
-	background-color: light-dark(color-mix(in srgb, AccentColor, black 50%),color-mix(in srgb, AccentColor, white 15%));
-	text-decoration:none;
-}
-
 section a,section a:visited {color:CanvasText;background-color:transparent;padding:0;border-radius:0;font-weight:600}
 section a:hover{color:CanvasText;background-color:transparent;text-decoration:underline}
 
@@ -130,10 +112,23 @@ section svg path {
 	margin-right: 0.5rem;
 }
 
-.main-nav ul li a {
+.main-nav ul li a,
+.main-nav ul li a:visited {
+	color: light-dark(Canvas, CanvasText);
+	text-decoration: none;
+	border-radius: 0.25rem;
+	padding: 0.2rem 0.5rem;
+	background-color: AccentColor;
+	letter-spacing: -0.011em;
+	word-spacing: -0.011em;
+	font-weight: 600;
 	font-size: 0.8rem;
-	text-transform: uppercase;
-	font-weight: 600
+	text-transform: uppercase;	
+}
+
+.main-nav ul li a:hover {
+	background-color: light-dark(color-mix(in srgb, AccentColor, black 50%),color-mix(in srgb, AccentColor, white 15%));
+	text-decoration:none;
 }
 
 .main-nav ul li a[aria-current="page"],
