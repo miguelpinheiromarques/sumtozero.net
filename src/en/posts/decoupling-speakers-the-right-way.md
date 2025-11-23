@@ -1,11 +1,11 @@
 ---
-title: A melhor forma de desacoplar colunas
+title: Decoupling loudspeakers the right way
 description: Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.
 date: 2020-09-02
 author: Miguel Pinheiro Marques
 translationKey: "decouplingspeakers"
-permalink: "/pt/posts/a-melhor-forma-de-desacoplar-colunas/" 
-tags: ["Studio Design", "Escuta"]
+permalink: "/en/posts/decoupling-speakers-the-right-way/" 
+tags: ["Studio Design", "Monitoring"]
 ---
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
