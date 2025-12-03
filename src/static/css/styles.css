@@ -326,7 +326,7 @@ section.credits {
 .contact .h4 {
 	margin-bottom: 2rem;
 }
-
+.contact button{color:light-dark(Canvas,CanvasText)}
 hr {
 	margin: 40px 0;
 	box-sizing: border-box;
