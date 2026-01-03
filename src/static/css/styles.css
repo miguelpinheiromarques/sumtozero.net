@@ -1,14 +1,14 @@
 :root {
 	--font-mono: "IBM Plex Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-	--accent: #4e77f6;
 	--bg1: light-dark(color-mix(in srgb, Canvas, CanvasText 2.5%), Canvas);
 	--bg2: light-dark(color-mix(in srgb, Canvas, CanvasText 4%), color-mix(in srgb, Canvas, CanvasText 1.5%));
 	--txt1: color-mix(in srgb, CanvasText, Canvas 2.5%);
 	--txt2: color-mix(in srgb, Canvas, CanvasText 2.5%);	
-	--acc1: AccentColor;
-	--acc2: color-mix(in srgb, AccentColor, white 20%);
-	--ntrl1: color-mix(in srgb, CanvasText, Canvas 50%);
-	--ntrl2: color-mix(in srgb, CanvasText, Canvas 95%);
+	--acc1: #4e77f6;
+	--acc2: color-mix(in srgb, #4e77f6, white 20%);
+	--acc3: #f0f0f0;
+	--ntrl1: light-dark(color-mix(in srgb, CanvasText, Canvas 60%),color-mix(in srgb, CanvasText, Canvas 50%));
+	--ntrl2: light-dark(color-mix(in srgb, CanvasText, Canvas 90%),color-mix(in srgb, CanvasText, Canvas 95%));
 }
 
 html {
@@ -22,12 +22,12 @@ body {
 }
 
 ::-moz-selection {
-	color: var(--txt1)
+	color: var(--acc3)
 	background: var(--acc1);
 }
 
 ::selection {
-	color: var(--txt1);
+	color: var(--acc3);
 	background: var(--acc1);
 }
 
@@ -135,7 +135,7 @@ section svg path {
 
 .main-nav ul li a,
 .main-nav ul li a:visited {
-	color: var(--txt1);
+	color: var(--acc3);
 	background-color: var(--acc1);
 	text-decoration: none;
 	border-radius: 0.25rem;
@@ -177,12 +177,13 @@ h3,
 }
 
 h1 {
-	font-size: 1.75rem;
-	letter-spacing: -0.15rem;
+	font-size: 1.5rem;
+	font-style:normal;
+	letter-spacing: -0.05rem;
 }
 
 h2 {
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	text-transform: uppercase;
 }
 
@@ -331,14 +332,14 @@ header {
 }
 
 section.credits {
-	padding: 2rem 0
+	margin-top:40px;
 }
 
 .credits span {
-	color: var(--ntrl1)
+	color: var(--ntrl1);
 }
 .credits a, .book a{font-style:italic;white-space: nowrap;}
-.credits .h4, .acoustics .h4, .book .h4{font-size:1rem;}
+.credits .h4, .acoustics .h4, .book .h4{font-size:0.8rem;}
 .credits .h4 span, .acoustics .h4 span, .book .h4 span{font-size:0.8rem;}
 
 .credits ul {
@@ -355,6 +356,8 @@ section.credits {
   /* No display: inline-block needed here */
   white-space: nowrap;
   font-style:italic;
+  font-weight:300;
+  color:var(--txt1);
 }
 
 /* Remove your existing ::after code entirely */
@@ -383,6 +386,8 @@ section.credits {
   /* Ensures text aligns nicely if one side wraps to a new line */
   align-items: baseline; 
   margin-bottom: 8px;
+  font-style:italic;
+  font-weight:300;
 }
 
 .project-list li span {
@@ -405,18 +410,38 @@ section.credits {
 }
 
 .about {
-	background-color: var(--ntrl2);
+	background-color: var(--bg2);
 	color: var(--txt1);
 	padding: 1rem;
 	border-radius: 0.25rem;
 }
+
+.book .signature {color:var(--txt1);margin-top:80px;}
+.book .signature svg {height:65px;width:auto;margin-left:0;}
+.book .signature svg path {fill:var(--txt1)}
 
 .contact .h4 {
 	margin-bottom: 2rem;
 }
 
 .contact button {
-	color: var(--txt1);
+	color: var(--acc3);
+	background-color: var(--acc1);
+	text-decoration: none;
+	border-radius: 0.25rem;
+	padding: 0.2rem 0.5rem;
+	letter-spacing: -0.011em;
+	word-spacing: -0.011em;
+	font-weight: 600;
+	font-size: 0.8rem;
+	font-style:normal;
+	text-transform: uppercase;
+}
+.contact button svg {
+	vertical-align:-24%;
+}
+.contact button svg path {
+	fill: var(--acc3);
 }
 
 hr {
@@ -450,22 +475,25 @@ footer p {
 	font-style: italic;
 }
 
-
+footer .social svg {height:20px;width:auto;}
+footer .social a {margin-right:10px;}
 .lang-switch {
 	float: right
 }
 
-.lang-switch ul {
-	display: inline;
-	text-align: right;
-	list-style-type: none;
+.lang-switch a {
+	text-decoration:none;border:0;
+	color: var(--acc3);
+	background-color: var(--acc1);
+	text-decoration: none;
+	border-radius: 0.25rem;
+	padding: 0.2rem 0.5rem;
+	letter-spacing: -0.011em;
+	word-spacing: -0.011em;
+	font-weight: 600;
+	font-size: 0.8rem;
+	text-transform: uppercase;
 }
-
-.lang-switch ul li {
-	margin-left: 2rem;
-	display: inline;
-}
-
 
 .post-navigation {
 	display: flex;
@@ -548,8 +576,7 @@ a.tag-link:hover {
 pre {
 	background: var(--bg2);
 	color: var(--ntrl1);
-	border-radius: 8px;
-	border: 1px solid #333;
+	border-radius: 2px;
 
 	/* Scroll Logic */
 	overflow-x: auto;
@@ -585,7 +612,7 @@ code {
 	/* Visuals */
 	color: light-dark(Canvas, CanvasText);
 	background-color: AccentColor;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	border: 0;
 	padding: 5px 10px;
 	font-size: 0.75rem;
 	border-radius: 4px;
