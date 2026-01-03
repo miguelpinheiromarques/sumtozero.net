@@ -22,12 +22,12 @@ body {
 }
 
 ::-moz-selection {
-	color: var(--txt2)
+	color: var(--txt1)
 	background: var(--acc1);
 }
 
 ::selection {
-	color: var(--txt2);
+	color: var(--txt1);
 	background: var(--acc1);
 }
 
@@ -148,7 +148,7 @@ section svg path {
 }
 
 .main-nav ul li a:hover {
-	background-color: var(--acc2)
+	background-color: var(--acc2);
 	text-decoration: none;
 }
 
@@ -326,7 +326,7 @@ header {
 	width: 100%;
 	height: auto;
 	object-fit: cover;
-	margin: 1rem 0;
+	margin: 0;
 	padding: 0
 }
 
@@ -336,6 +336,72 @@ section.credits {
 
 .credits span {
 	color: var(--ntrl1)
+}
+.credits a, .book a{font-style:italic;white-space: nowrap;}
+.credits .h4, .acoustics .h4, .book .h4{font-size:1rem;}
+.credits .h4 span, .acoustics .h4 span, .book .h4 span{font-size:0.8rem;}
+
+.credits ul {
+  display: flex; /* Enables flexible layout */
+  flex-wrap: wrap; /* Allows items to wrap to multiple lines */
+  gap: 7px 40px; /* 20px vertical gap, 30px horizontal gap */
+  justify-content: flex-start;  
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.credits li {
+  /* No display: inline-block needed here */
+  white-space: nowrap;
+  font-style:italic;
+}
+
+/* Remove your existing ::after code entirely */
+.credits li::after {
+  content: none; 
+}
+
+/* Assign a class to your UL, e.g., <ul class="project-list"> */
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-list li {
+  display: grid;
+  /* First value (200px) is the width of the Project Name column.
+	 Adjust this number to fit your longest project title (e.g., 'Estúdio Vale de Lobos').
+	 Second value (1fr) means "take up the rest of the space".
+  */
+  grid-template-columns: 200px 1fr; 
+  
+  /* This creates the "tab" gap between the columns */
+  gap: 30px; 
+  
+  /* Ensures text aligns nicely if one side wraps to a new line */
+  align-items: baseline; 
+  margin-bottom: 8px;
+}
+
+.project-list li span {
+  /* Optional: Make the description lighter or smaller */
+  opacity: 0.7; 
+}
+
+/* MOBILE RESPONSIVENESS */
+/* On small screens, stack them so the text doesn't get squashed */
+@media (max-width: 600px) {
+  .project-list li {
+	display: block;
+	margin-bottom: 16px;
+  }
+  
+  .project-list li span {
+	display: block; /* Moves description to the next line */
+	margin-top: 4px;
+  }
 }
 
 .about {
