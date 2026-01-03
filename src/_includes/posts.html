@@ -11,6 +11,47 @@ layout: default
     <article>
         {{ content | safe }}
     </article>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const codeBlocks = document.querySelectorAll('pre');
+      
+        codeBlocks.forEach(block => {
+          // 1. Create the wrapper div
+          const wrapper = document.createElement('div');
+          wrapper.className = 'code-wrapper';
+      
+          // 2. Insert wrapper before the code block
+          block.parentNode.insertBefore(wrapper, block);
+      
+          // 3. Move the code block INSIDE the wrapper
+          wrapper.appendChild(block);
+      
+          // 4. Create the button
+          const button = document.createElement('button');
+          button.className = 'copy-code-button';
+          button.innerText = 'Copy';
+      
+          // 5. Button Logic
+          button.addEventListener('click', () => {
+            const code = block.querySelector('code');
+            const text = code ? code.innerText : block.innerText;
+      
+            navigator.clipboard.writeText(text).then(() => {
+              button.innerText = 'Copied!';
+              button.classList.add('copied');
+              setTimeout(() => {
+                button.innerText = 'Copy';
+                button.classList.remove('copied');
+              }, 2000);
+            });
+          });
+      
+          // 6. Add button to wrapper (It is now a sibling of 'pre')
+          wrapper.appendChild(button);
+        });
+      });
+    </script>
 
 {% set currentCollection = collections["posts_" + lang] %}
 {% set nextPost = null %}

@@ -1,6 +1,14 @@
 :root {
 	--font-mono: "IBM Plex Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 	--accent: #4e77f6;
+	--bg1: light-dark(color-mix(in srgb, Canvas, CanvasText 2.5%), Canvas);
+	--bg2: light-dark(color-mix(in srgb, Canvas, CanvasText 4%), color-mix(in srgb, Canvas, CanvasText 1.5%));
+	--txt1: color-mix(in srgb, CanvasText, Canvas 2.5%);
+	--txt2: color-mix(in srgb, Canvas, CanvasText 2.5%);	
+	--acc1: AccentColor;
+	--acc2: color-mix(in srgb, AccentColor, white 20%);
+	--ntrl1: color-mix(in srgb, CanvasText, Canvas 50%);
+	--ntrl2: color-mix(in srgb, CanvasText, Canvas 95%);
 }
 
 html {
@@ -9,24 +17,25 @@ html {
 }
 
 body {
-	background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 2.5%), Canvas);
-	color: color-mix(in srgb, CanvasText, Canvas 2.5%);
+	background-color: var(--bg1);
+	color: var(--txt1);
 }
 
 ::-moz-selection {
-	color: light-dark(Canvas, CanvasText);
-	background: AccentColor;
+	color: var(--txt2)
+	background: var(--acc1);
 }
 
 ::selection {
-	color: light-dark(Canvas, CanvasText);
-	background: AccentColor;
+	color: var(--txt2);
+	background: var(--acc1);
 }
 
 section,
 header,
 footer {
 	margin: 0 1rem;
+
 	@media screen and (min-width: 48em) {
 		margin: 0 20%;
 	}
@@ -49,7 +58,7 @@ textarea::placeholder,
 	font-family: var(--font-mono);
 	font-size: clamp(0.95rem, 1.095rem + -0.227vw, 1.05rem);
 	letter-spacing: 0;
-	color: color-mix(in srgb, CanvasText, Canvas 2.5%);
+	color: var(--txt1);
 }
 
 @supports (font: -apple-system-body) {
@@ -79,11 +88,23 @@ textarea::placeholder,
 	padding: 0;
 }
 
-section a,section a:visited {color:CanvasText;background-color:transparent;padding:0;border-radius:0;font-weight:600}
-section a:hover{color:CanvasText;background-color:transparent;text-decoration:underline}
+section a,
+section a:visited {
+	color: var(--txt1);
+	background-color: transparent;
+	padding: 0;
+	border-radius: 0;
+	font-weight: 600
+}
+
+section a:hover {
+	color: var(--txt1);
+	background-color: transparent;
+	text-decoration: underline
+}
 
 section svg {
-	color: Canvas;
+	color: var(--bg1);
 	width: 14px;
 	height: 14px;
 	line-height: 14px;
@@ -93,7 +114,7 @@ section svg {
 }
 
 section svg path {
-	fill: Canvas;
+	fill: var(--bg1);
 }
 
 .main-nav {
@@ -114,31 +135,30 @@ section svg path {
 
 .main-nav ul li a,
 .main-nav ul li a:visited {
-	color: light-dark(Canvas, CanvasText);
+	color: var(--txt1);
+	background-color: var(--acc1);
 	text-decoration: none;
 	border-radius: 0.25rem;
 	padding: 0.2rem 0.5rem;
-	background-color: AccentColor;
 	letter-spacing: -0.011em;
 	word-spacing: -0.011em;
 	font-weight: 600;
 	font-size: 0.8rem;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 
 .main-nav ul li a:hover {
-	background-color: light-dark(color-mix(in srgb, AccentColor, black 50%),color-mix(in srgb, AccentColor, white 15%));
-	text-decoration:none;
+	background-color: var(--acc2)
+	text-decoration: none;
 }
 
 .main-nav ul li a[aria-current="page"],
-.main-nav ul li a.active {
-}
+.main-nav ul li a.active {}
 
 p {
 	line-height: calc(1ex / 0.32);
 	margin: calc(1ex / 0.32) 0;
-	color: color-mix(in srgb, CanvasText, Canvas 35%);
+	color: var(--txt1);
 	letter-spacing: -0.011em;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -157,7 +177,7 @@ h3,
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 1.75rem;
 	letter-spacing: -0.15rem;
 }
 
@@ -176,7 +196,7 @@ h3 {
 	font-style: italic;
 	font-weight: 300;
 	text-transform: lowercase;
-	color: color-mix(in srgb, CanvasText, Canvas 50%);
+	color: var(--ntrl1);
 }
 
 #about,
@@ -195,7 +215,7 @@ input {
 	width: 100%;
 	height: 30px;
 	margin: 4px 0 10px 0;
-	background: light-dark(color-mix(in srgb, Canvas, CanvasText 4%), color-mix(in srgb, Canvas, CanvasText 1.5%));
+	background: var(--bg2);
 	border: 0;
 	outline: 0;
 	padding-left: 10px;
@@ -205,7 +225,7 @@ textarea {
 	width: 100%;
 	min-height: 200px;
 	margin: 0;
-	background: light-dark(color-mix(in srgb, Canvas, CanvasText 4%), color-mix(in srgb, Canvas, CanvasText 1.5%));
+	background: var(--bg2);
 	border: 0;
 	outline: 0;
 	resize: none;
@@ -214,17 +234,18 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-	color: color-mix(in srgb, CanvasText, Canvas 65%);
+	color: var(--ntrl1)
 }
 
 label {
-	color: color-mix(in srgb, CanvasText, Canvas 35%);
+	color: var(--ntrl1)
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 }
 
 button {
-	background-color: AccentColor;
+	color: var(--txt1);
+	background-color: var(--acc1);
 	-webkit-appearance: none;
 	border: 0;
 	outline: 0;
@@ -232,7 +253,6 @@ button {
 	padding: 0.2rem 0.7rem;
 	border-radius: 0.5rem;
 	margin-top: 10px;
-	color: Canvas;
 	text-transform: lowercase;
 	letter-spacing: -0.011em;
 	word-spacing: -0.011em;
@@ -242,7 +262,7 @@ button {
 }
 
 button:hover {
-	background-color: color-mix(in srgb, AccentColor, CanvasText 25%);
+	background-color: var(--acc2);
 }
 
 button svg {
@@ -254,11 +274,11 @@ button svg {
 	padding: 0;
 	margin-left: 0.8rem;
 	margin-top: -1px;
-	color:light-dark(Canvas,CanvasText);
+	color: var(--txt1);
 }
 
 button svg path {
-	fill: light-dark(Canvas,CanvasText)
+	fill: var(--txt1);
 }
 
 header {
@@ -266,13 +286,13 @@ header {
 }
 
 .heading div h1 {
-	font-size:2.2rem;
+	font-size: 2.2rem;
 	line-height: 1.8rem;
-	margin:0 0 0.35rem 0;
+	margin: 0 0 0.35rem 0;
 	font-weight: 400;
-	font-style:italic;
+	font-style: italic;
 	word-spacing: -0.5rem;
-	text-transform:lowercase;
+	text-transform: lowercase;
 }
 
 .heading {
@@ -289,12 +309,17 @@ header {
 	height: auto;
 }
 
-.heading svg path.logo-fill{fill:light-dark(CanvasText,CanvasText)}
-.heading svg path.logo-stroke{stroke:light-dark(CanvasText,CanvasText)}
+.heading svg path.logo-fill {
+	fill: var(--txt1);
+}
+
+.heading svg path.logo-stroke {
+	stroke: var(--txt1);
+}
 
 .heading .h4 {
 	margin-top: 0;
-	max-width:65%;
+	max-width: 65%;
 }
 
 .hero img {
@@ -310,33 +335,34 @@ section.credits {
 }
 
 .credits span {
-	color: light-dark(color-mix(in srgb, Canvas, CanvasText 10%), color-mix(in srgb, Canvas, CanvasText 20%))
+	color: var(--ntrl1)
 }
 
 .about {
-	background-color:light-dark(color-mix(in srgb, CanvasText, Canvas 6%), color-mix(in srgb, Canvas, CanvasText 3%));
-	color:light-dark(Canvas,CanvasText);
-	padding:1rem;
-	border-radius:0.25rem;
-}
-.about p, .about .h4, .about h2{
-	color:light-dark(color-mix(in srgb, Canvas, CanvasText 2.5%),CanvasText);
+	background-color: var(--ntrl2);
+	color: var(--txt1);
+	padding: 1rem;
+	border-radius: 0.25rem;
 }
 
 .contact .h4 {
 	margin-bottom: 2rem;
 }
-.contact button{color:light-dark(Canvas,CanvasText)}
+
+.contact button {
+	color: var(--txt1);
+}
+
 hr {
 	margin: 40px 0;
 	box-sizing: border-box;
 	border: 0 none transparent;
-	border-top: 1px solid light-dark(color-mix(in srgb, Canvas, CanvasText 5%), color-mix(in srgb, Canvas, CanvasText 10%));
+	border-top: 1px solid var(--ntrl2);
 }
 
 .thankyou {
-	color: color-mix(in srgb, Canvas, CanvasText 2.5%);
-	background-color: AccentColor;
+	color: var(--txt1);
+	background-color: var(--acc1);
 	margin-top: 2rem;
 	padding: 0.5rem;
 	border-radius: 0.5rem;
@@ -352,20 +378,12 @@ footer {
 }
 
 footer p {
-	color: color-mix(in srgb, CanvasText, Canvas 50%);
+	color: var(--ntrl1);
 	font-size: 0.8rem;
 	word-spacing: 100vw;
 	font-style: italic;
 }
 
-footer svg {
-	height: 50px;
-	width: auto;
-}
-
-footer svg path {
-	fill: color-mix(in srgb, CanvasText, Canvas 40%)
-}
 
 .lang-switch {
 	float: right
@@ -399,47 +417,128 @@ footer svg path {
 .nav-label {
 	font-size: 0.85em;
 	text-transform: uppercase;
-	color: color-mix(in srgb, Canvas, CanvasText 50%);
+	color: var(--txt1);
 	font-weight: bold;
 }
 
 .nav-title {
 	font-size: 1.1em;
 }
+
 .post-tags {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  font-size: 0.9rem;
+	margin-top: 2rem;
+	padding-top: 1rem;
+	font-size: 0.9rem;
 }
 
 a.tag-link {
-  background-color: color-mix(in srgb, Canvas, CanvasText 5%);
-  color: CanvasText;
-  padding:0.5rem;
-  border-radius: 0.25rem;
-  text-decoration: none;
-  margin-left: 1rem;
-  font-size:0.85rem;
-  text-transform:lowercase;
+	background-color: var(--bg1);
+	color: var(--txt1);
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	text-decoration: none;
+	margin-left: 1rem;
+	font-size: 0.85rem;
+	text-transform: lowercase;
 }
+
 a.tag-link:hover {
-  background-color: color-mix(in srgb, Canvas, CanvasText 5%);
-  color: CanvasText;
+	background-color: var(--bg1);
+	color: var(--txt1);
 }
-.rss a{background-color: light-dark(color-mix(in srgb, Canvas, CanvasText 5%), color-mix(in srgb, Canvas, black 50%));}
+
+.rss a {
+	background-color: var(--ntrl1);
+}
+
 .rss-link {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: CanvasText;
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	color: CanvasText;
 }
 
 .rss-link:hover {
-  color: #f26522; /* Standard RSS Orange, or use your brand color */
+	color: #f26522;
+	/* Standard RSS Orange, or use your brand color */
 }
 
 .rss-link svg {
-  display: block;
-	height:14px;
+	display: block;
+	height: 14px;
 	width: auto;
+}
+
+/* code block */
+/* 1. The Wrapper (The "Anchor" for the button) */
+.code-wrapper {
+	display: block;
+	position: relative;
+	/* Establishes the boundary for the absolute button */
+	margin: 2rem 0;
+}
+
+/* 2. The Scrollable Area (The Code) */
+pre {
+	background: var(--bg2);
+	color: var(--ntrl1);
+	border-radius: 8px;
+	border: 1px solid #333;
+
+	/* Scroll Logic */
+	overflow-x: auto;
+	/* Horizontal scroll for long lines */
+	overflow-y: auto;
+	/* Vertical scroll for tall blocks */
+	max-height: 500px;
+	/* The "Standard" height limit */
+
+	/* Reset margins since the wrapper handles spacing */
+	margin: 0;
+	padding: 2rem;
+	font-size:0.75rem;
+}
+
+code {
+	padding: 0;
+	/* Remove padding from the inner element */
+	margin: 0;
+	text-indent: 0;
+	/* Ensure no first-line indentation */
+}
+
+/* 3. The Button (Fixed to the top-right of the wrapper) */
+.copy-code-button {
+	position: absolute;
+	/* Absolute relative to .code-wrapper */
+	top: 10px;
+	right: 10px;
+	z-index: 10;
+	/* Sit on top of the scrollbar/text */
+
+	/* Visuals */
+	color: light-dark(Canvas, CanvasText);
+	background-color: AccentColor;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 5px 10px;
+	font-size: 0.75rem;
+	border-radius: 4px;
+	cursor: pointer;
+	backdrop-filter: blur(4px);
+	opacity: 0;
+	transition: opacity 0.2s, background 0.2s;
+}
+
+/* Show button when hovering the wrapper */
+.code-wrapper:hover .copy-code-button {
+	opacity: 1;
+}
+
+.copy-code-button:hover {
+	background: var(--acc2);
+}
+
+.copy-code-button.copied {
+	background: #4caf50;
+	border-color: #4caf50;
 }
