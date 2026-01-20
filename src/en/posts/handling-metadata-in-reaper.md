@@ -1,6 +1,6 @@
 ---
 title: Handling metadata when using Reaper for mastering
-description: Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.
+description: How we deal with album and song metadata while mastering in Reaper, for digital streaming and CD replication in DDP
 date: 2026-01-03
 author: Miguel Pinheiro Marques
 translationKey: "metadatareaper"
@@ -8,12 +8,32 @@ permalink: "/en/posts/handling-metadata-when-using-reaper-for-mastering/"
 tags: ["Mastering", "Reaper"]
 ---
 
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Handling metadata is a crucial step in mastering a record. It serves as an excellent tool for maintaining a well-organized and searchable digital archive, which is particularly beneficial for mastering studios. Clients often request files years after the mastering process, and metadata ensures that these files can be easily located and accessed. Additionally, handling files without proper metadata can pose challenges for digital distribution. Furthermore, despite the prevalence of digital formats, CDs are still a part of the music industry, and CD-TEXT was always a valued feature for musicians which makes printing metadata to DDP master files a common practice.
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+One of the key reasons we love and use Reaper for mastering is that it allows us to perform all tasks within a single application and project, including audio processing, sequencing, and exporting masters. This also means we can store the release’s metadata and handle all related tasks using Reaper. The primary way we utilize metadata in Reaper is by adding it to regions.
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+### Why regions?
+Working with regions in Reaper for mastering makes perfect sense, especially when you’re dealing with time-constrained pieces of music, such as a single song, several songs in a record, or movements in a classical piece. Even for a gapless record, having regions helps you determine where specific parts begin and end, making it convenient to work with. You can jump between sections and even make cuts to process regions separately if needed, even if you ultimately export everything as a single continuous file.
 
+So how do we approach metadata in Reaper regions? We take a cue from the built-in system designed for DDP export in markers and we ended up with the following template:
+
+```
+#TITLE=Song Title|PERFORMER=Artist|COMPOSER=Composer|LYRICIST=Writer|ISRC=PTKNU2600001|VERSION=1|VINYL=A1
+```
+
+For each region, we use this template and edit the required fields for that specific release. This serves as a means for us to input information about each region, which we can later retrieve using wildcards. TITLE, PERFORMER, COMPOSER, ISRC and LYRICIST are self-explanatory fields. The VERSION field is used internally and during the mastering process. If revisions occur on a track, we can easily trace those revisions. The VINYL field is also useful since I frequently release vinyl records. It allows us to add track numbering like A1, B2, C4 (or any other format) to files. For digital releases, the region number determines the track ordering. For vinyl releases, the wildcard determines the track sequencing on vinyl. This way, you can even have separate sequencing for digital and vinyl releases, and it will always be saved in the project information.
+
+### What about album and release metadata?
+
+While adding information to individual track metadata in regions is excellent, we still need a few fields related to the entire release information, such as the release artist and release title. At our studio, we simply add this information to the Reaper project’s notes in the Title & Author field. You can find those fields in Project Settings, in the Notes tab.
+
+### So what's next?
+
+After you've inputed all information in your regions name, you just need to tell Reaper to use that as metadata when exporting files. In Reaper's Render to File window, turn the "Metadata..." toggle on, and add the wildcards from your regions to each field you want to extract the information from the region title. At our studio, our template is the following:
+
+![alt text](/static/img/project_render_metadata.png "Title")
+
+*Convert Regions to DDP Markers script*
 ```
 --[[
 * ReaScript Name: Convert Regions to DDP Markers

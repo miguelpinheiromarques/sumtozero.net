@@ -174,29 +174,26 @@ h3,
 	-moz-font-smoothing: antialiased;
 	margin: 0;
 	padding: 0;
+	font-style:italic;
 }
 
 h1 {
 	font-size: 1.5rem;
-	font-style:normal;
 	letter-spacing: -0.05rem;
 }
 
 h2 {
 	font-size: 1.4rem;
-	text-transform: uppercase;
 }
 
 h3 {
 	font-size: 1.2rem;
-	text-transform: uppercase;
 }
 
 .h4 {
 	font-size: 1rem;
 	font-style: italic;
 	font-weight: 300;
-	text-transform: lowercase;
 	color: var(--ntrl1);
 }
 
@@ -330,6 +327,8 @@ header {
 	margin: 0;
 	padding: 0
 }
+
+article img{width:100%;}
 
 section.credits {
 	margin-top:40px;
@@ -476,6 +475,7 @@ footer p {
 }
 
 footer .social svg {height:20px;width:auto;}
+footer .social svg path{fill:light-dark(#181818,#FFF)}
 footer .social a {margin-right:10px;}
 .lang-switch {
 	float: right
