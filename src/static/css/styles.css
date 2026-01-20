@@ -164,6 +164,14 @@ p {
 	-webkit-font-smoothing: antialiased;
 }
 
+ul, li {
+	color: var(--txt1);
+	letter-spacing: -0.011em;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	margin-top:10px;
+}
+
 h1,
 h2,
 h3,
@@ -180,14 +188,26 @@ h3,
 h1 {
 	font-size: 1.5rem;
 	letter-spacing: -0.05rem;
+	margin-bottom:0;
+	padding:0;
 }
 
 h2 {
 	font-size: 1.4rem;
+	margin-bottom: 0;
+	padding:0;
 }
 
 h3 {
 	font-size: 1.2rem;
+	margin:0;
+	padding:40px 0 0 0;
+}
+h4 {
+	font-size: 1rem;
+	margin:0;
+	padding:40px 0 0 0;
+	font-style:italic;
 }
 
 .h4 {
