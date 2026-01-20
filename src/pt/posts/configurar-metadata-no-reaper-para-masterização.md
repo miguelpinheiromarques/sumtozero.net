@@ -8,16 +8,73 @@ permalink: "/pt/posts/configurar-metadata-no-reaper-para-masterização/"
 tags: ["Masterização", "Reaper", "Scripts"]
 ---
 
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+A gestão de metadados é um passo crucial na masterização de um disco. Serve como uma ferramenta excelente para manter um arquivo digital bem organizado e pesquisável — uma necessidade para qualquer estúdio de masterização. Os clientes solicitam frequentemente ficheiros anos após o processo estar concluído, e metadados adequados garantem que esses ficheiros possam ser localizados facilmente.
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+Para além do arquivo, metadados em falta ou incorretos colocam desafios significativos para a distribuição digital. Além disso, apesar do domínio do streaming, os CDs continuam a ser uma parte vital da indústria musical. O CD-TEXT sempre foi uma funcionalidade valorizada pelos músicos, tornando a inserção precisa de metadados em ficheiros master DDP um requisito.
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+Uma das principais razões pelas quais adoro usar o Reaper para masterização é a sua capacidade de gerir todas as tarefas num único projeto: processamento de áudio, sequência e exportação. Esta centralização permite-me inserir os metadados de um lançamento diretamente na timeline e automatizar o processo de exportação.
+
+A forma principal como giro isto é anexando os metadados diretamente às regiões (Regions).
+
+### Porquê Regiões?
+Trabalhar com regiões no Reaper faz todo o sentido para masterização, especialmente quando se lida com áudio delimitado no tempo, como uma música individual, um álbum, ou movimentos numa peça de música clássica.
+
+Mesmo para um disco gapless (sem pausas), as regiões ajudam a visualizar onde começam e acabam partes específicas. Permitem saltar entre secções instantaneamente e fazer cortes para processar secções separadamente se necessário — mesmo que, no final, exporte tudo como um único ficheiro contínuo.
+
+Inspirei-me no sistema nativo do Reaper desenhado para exportação de DDP e desenvolvi um modelo padrão de nomeação de regiões:
+
+```
+#TITLE=Title|PERFORMER=Artist|COMPOSER=Composer|LYRICIST=Lyricist|ISRC=PTKNU2600001|VERSION=1|VINYL=A1
+```
+
+Para cada região, uso este modelo e edito os campos para essa faixa específica. Isto permite-me inserir dados granulares que podem ser recuperados mais tarde usando wildcards durante o processo de render.
+
+#### Detalhe dos Campos
+- Campos Padrão: TITLE, PERFORMER, COMPOSER, LYRICIST e ISRC são etiquetas (tags) padrão autoexplicativas.
+- VERSION: Usado internamente. Se uma faixa for alvo de revisões, consigo facilmente identificar o número da versão no nome do ficheiro.
+- VINYL: Como masterizo frequentemente para vinil, este campo permite-me designar os lados (ex: A1, A2, B1, C4). Para streaming o ID da região determina a ordem das faixas (1, 2, 3...) mas para vinyl extraio o wildcard deste campo para determinar a sequência.
+
+Esta abordagem garante até que seja possível ter sequências distintas para lançamentos digitais e vinil, além de que essa informação fica sempre guardada dentro do projeto.
+
+### Metadados Globais do Lançamento
+Enquanto os metadados da região lidam com detalhes ao nível da faixa, também preciso de campos para o lançamento inteiro (ex: Artista do Álbum, Título do Álbum) e para isso guardo essa informação isto nas Definições do Projeto (Project Settings):
+
+- Ir a File > Project Settings.
+- Clicar no separador Notes.
+- Preencher os campos "Title" (Nome do Álbum) e "Author" (Artista do Álbum).
+
+### Exportar Ficheiros Digitais
+Assim que as regiões estiverem nomeadas, o próximo passo é instruir o Reaper a usar esse texto como metadados.
+
+- Na janela Render to File:
+- Ativar a opção Metadata....
+- Usar wildcards para extrair os dados da sua região para tags ID3/WAV.
+- Por exemplo, para definir o Título da Faixa, usaria: $region(#TITLE)[|]
+
+![Reaper Render Metadata com wildcards](/static/img/project_render_metadata.png "Reaper Render Metadata with wildcards")
+
+#### Padrão de Nomeação de Ficheiros
+Também uso estes wildcards para gerir nomes dos ficheiros para exportação. O padrão de nomeação habitual do nosso estúdio é:
+
+```
+$region(PERFORMER)[|] - $regionnumber $region(#TITLE)[|] v$region(VERSION)[|]
+```
+
+Isto gera automaticamente nomes de ficheiros como: *Nome do Artista - 01 Título da Música v1.wav*
+
+### Gerir DDPs e CD-TEXT
+Enquanto o sistema acima funciona perfeitamente para ficheiros digitais, os CDs de Áudio (imagens DDP) requerem uma abordagem especializada. Os DDPs dependem de marcadores (markers) específicos para identificar pontos de início de faixa, índices e CD-TEXT.
+
+O Reaper tem suporte nativo para DDP, mas colocar marcadores manualmente e escrever os metadados para eles é entediante e propenso a erros. Felizmente, o Reaper permite a criação de scripts. Escrevi um script em Lua que automatiza todo este processo. O script extrai toda a informação que já inserimos nas regiões, limpa caracteres especiais e converte-os para marcadores específicos necessários para um DDP válido.
+
+Este script faz duas coisas:
+- Converte Regiões em Marcadores: Insere nos inícios das regiões marcadores de faixa (#) e gere os marcadores especiais de início (!) e fim (@) exigidos pela norma DDP.
+- Simplfica o Texto: O CD-TEXT é muito restrito quanto aos conjuntos de caracteres (ASCII), não aceitando por exemplo alguns dos caracteres usados na lingua Portuguesa. O script converte automaticamente caracteres como “ç” para “c” ou “ã" para “a”. Embora não seja linguisticamente perfeito, evita que os leitores de CD exibam caracteres errado ou rejeitem o texto completamente.
 
 ```
 --[[
 * ReaScript Name: Convert Regions to DDP Markers
-* Description: Creates DDP markers (!, Tracks, @) with full metadata integration.
+* Description: Creates DDP markers (!, Tracks, @) with full metadata integration and text sanitization.
 * Author: Knurl Mastering
 --]]
 
