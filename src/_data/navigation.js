@@ -13,7 +13,7 @@ module.exports = [
   {
 	key: "about",
 	labels: {
-	  en: "About",
+	  en: "About me",
 	  pt: "Sobre"
 	},
 	urls: {

@@ -7,18 +7,42 @@
 	--acc1: #4e77f6;
 	--acc2: color-mix(in srgb, #4e77f6, white 20%);
 	--acc3: #f0f0f0;
-	--ntrl1: light-dark(color-mix(in srgb, CanvasText, Canvas 60%),color-mix(in srgb, CanvasText, Canvas 50%));
+	--ntrl1: light-dark(color-mix(in srgb, CanvasText, Canvas 60%),color-mix(in srgb, CanvasText, Canvas 60%));
 	--ntrl2: light-dark(color-mix(in srgb, CanvasText, Canvas 90%),color-mix(in srgb, CanvasText, Canvas 95%));
 }
 
 html {
 	scroll-behavior: smooth;
 	color-scheme: light dark;
+	background-color: var(--bg1);
 }
 
-body {
-	background-color: var(--bg1);
+body,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+form,
+button,
+input,
+textarea,
+input::placeholder,
+textarea::placeholder,
+#menu {
 	color: var(--txt1);
+	font-family: var(--font-mono);
+	font-size: clamp(0.95rem, 1.095rem + -0.227vw, 1.05rem);
+	letter-spacing: 0;
+	color: var(--txt1);
+	font-weight:300;
+}
+
+input::placeholder,
+textarea::placeholder{
+	font-size:80%;
+	text-transform:lowercase;
 }
 
 ::-moz-selection {
@@ -40,35 +64,10 @@ footer {
 		margin: 0 20%;
 	}
 }
-
-body,
-p,
-a,
-h1,
-h2,
-h3,
-h4,
-form,
-button,
-input,
-textarea,
-input::placeholder,
-textarea::placeholder,
-#menu {
-	font-family: var(--font-mono);
-	font-size: clamp(0.95rem, 1.095rem + -0.227vw, 1.05rem);
-	letter-spacing: 0;
-	color: var(--txt1);
-}
-
 @supports (font: -apple-system-body) {
 	body,
 	p,
 	a,
-	h1,
-	h2,
-	h3,
-	h4,
 	form,
 	button,
 	input,
@@ -100,7 +99,8 @@ section a:visited {
 section a:hover {
 	color: var(--txt1);
 	background-color: transparent;
-	text-decoration: underline
+	text-decoration: underline;
+	text-decoration-color:var(--ntrl2);
 }
 
 section svg {
@@ -143,17 +143,17 @@ section svg path {
 	letter-spacing: -0.011em;
 	word-spacing: -0.011em;
 	font-weight: 600;
-	font-size: 0.8rem;
+	font-size: 80%;
+	border:2px solid transparent;
 	text-transform: uppercase;
 }
 
 .main-nav ul li a:hover {
-	background-color: var(--acc2);
+	border:2px solid var(--acc2);
 	text-decoration: none;
 }
 
-.main-nav ul li a[aria-current="page"],
-.main-nav ul li a.active {}
+.main-nav ul li a[aria-current="page"],.main-nav ul li a.active {border:2px solid var(--acc2)}
 
 p {
 	line-height: calc(1ex / 0.32);
@@ -183,39 +183,26 @@ h3,
 	margin: 0;
 	padding: 0;
 	font-style:italic;
+	letter-spacing:-0.05rem;
+	word-spacing:-0.05rem;
 }
 
 h1 {
-	font-size: 1.5rem;
-	letter-spacing: -0.05rem;
-	margin-bottom:0;
-	padding:0;
+	font-size: 160%;
 }
 
 h2 {
-	font-size: 1.4rem;
-	margin-bottom: 0;
-	padding:0;
+	font-size: 140%;
 }
 
 h3 {
-	font-size: 1.2rem;
-	margin:0;
-	padding:40px 0 0 0;
+	font-size: 120%;
 }
-h4 {
-	font-size: 1rem;
-	margin:0;
-	padding:40px 0 0 0;
+h4,.h4 {
+	font-size:90%;
 	font-style:italic;
 	color:var(--ntrl1);
-}
-
-.h4 {
-	font-size: 1rem;
-	font-style: italic;
-	font-weight: 300;
-	color: var(--ntrl1);
+	font-weight:300;
 }
 
 #about,
@@ -226,6 +213,18 @@ h4 {
 	scroll-margin-top: 2rem;
 }
 
+#about a,
+#credits a,
+#acoustics a,
+#book a,
+#contact a{font-weight:300;text-decoration:underline;text-decoration-color:var(--ntrl2);}
+#about a:hover,
+#credits a:hover,
+#acoustics a:hover,
+#book a:hover,
+#contact a:hover{text-decoration-color:var(--txt1);}
+
+.page-count{font-size:80%;font-weight:300;}
 form {
 	margin-right: 20px;
 }
@@ -275,9 +274,7 @@ button {
 	text-transform: lowercase;
 	letter-spacing: -0.011em;
 	word-spacing: -0.011em;
-	font-weight: 300;
 	font-style: italic;
-	font-size: 1rem;
 }
 
 button:hover {
@@ -304,16 +301,15 @@ header {
 	margin-top: 4rem;
 }
 
-.heading div h1 {
-	font-size: 2.2rem;
+.heading h1 {
+	font-size:200%;
 	line-height: 1.8rem;
 	margin: 0 0 0.35rem 0;
-	font-weight: 400;
 	font-style: italic;
-	word-spacing: -0.5rem;
 	text-transform: lowercase;
 }
-
+.heading a,.heading a:visited {text-decoration:none;}
+.heading a:hover{text-decoration:underline;text-decoration-color:var(--ntrl2);}
 .heading {
 	display: flex;
 	justify-content: space-between;
@@ -339,6 +335,7 @@ header {
 .heading .h4 {
 	margin-top: 0;
 	max-width: 65%;
+	font-size:100%;
 }
 
 .hero img {
@@ -350,6 +347,9 @@ header {
 }
 
 article img{width:100%;}
+article a{text-decoration:underline;text-decoration-color:var(--ntrl2);}
+article a.read-more{font-style:italic;font-size:80%}
+article h2{margin-bottom:5px;}
 
 section.credits {
 	margin-top:40px;
@@ -358,9 +358,13 @@ section.credits {
 .credits span {
 	color: var(--ntrl1);
 }
-.credits a, .book a{font-style:italic;white-space: nowrap;}
-.credits .h4, .acoustics .h4, .book .h4{font-size:0.8rem;}
-.credits .h4 span, .acoustics .h4 span, .book .h4 span{font-size:0.8rem;}
+.credits a, .book a{
+	font-style:italic;
+	@media screen and (min-width: 48em) {
+		white-space: nowrap;
+	}
+}
+.credits .h4, .acoustics .h4, .book .h4,.credits .h4 span, .acoustics .h4 span, .book .h4 span{font-size:90%}
 
 .credits ul {
   display: flex; /* Enables flexible layout */
@@ -376,7 +380,6 @@ section.credits {
   /* No display: inline-block needed here */
   white-space: nowrap;
   font-style:italic;
-  font-weight:300;
   color:var(--txt1);
 }
 
@@ -407,7 +410,6 @@ section.credits {
   align-items: baseline; 
   margin-bottom: 8px;
   font-style:italic;
-  font-weight:300;
 }
 
 .project-list li span {
@@ -437,7 +439,7 @@ section.credits {
 }
 
 .book .signature {color:var(--txt1);margin-top:80px;}
-.book .signature svg {height:65px;width:auto;margin-left:0;}
+.book .signature svg {height:55px;width:auto;margin-left:0;}
 .book .signature svg path {fill:var(--txt1)}
 
 .contact .h4 {
@@ -453,7 +455,7 @@ section.credits {
 	letter-spacing: -0.011em;
 	word-spacing: -0.011em;
 	font-weight: 600;
-	font-size: 0.8rem;
+	font-size:90%;
 	font-style:normal;
 	text-transform: uppercase;
 }
@@ -488,10 +490,9 @@ footer {
 	padding: 4rem 0;
 }
 
-footer p {
+footer small {
 	color: var(--ntrl1);
-	font-size: 0.8rem;
-	word-spacing: 100vw;
+	font-size:90%;
 	font-style: italic;
 }
 
@@ -512,7 +513,7 @@ footer .social a {margin-right:10px;}
 	letter-spacing: -0.011em;
 	word-spacing: -0.011em;
 	font-weight: 600;
-	font-size: 0.8rem;
+	font-size:80%;
 	text-transform: uppercase;
 }
 
@@ -530,20 +531,17 @@ footer .social a {margin-right:10px;}
 }
 
 .nav-label {
-	font-size: 0.85em;
+	font-size:90%;
 	text-transform: uppercase;
 	color: var(--txt1);
-	font-weight: bold;
-}
-
-.nav-title {
-	font-size: 1.1em;
+	font-weight: 600;
 }
 
 .post-tags {
 	margin-top: 2rem;
 	padding-top: 1rem;
-	font-size: 0.9rem;
+	line-height:2rem;
+	font-size: 90%;
 }
 
 a.tag-link {
@@ -553,7 +551,7 @@ a.tag-link {
 	border-radius: 0.25rem;
 	text-decoration: none;
 	margin-left: 1rem;
-	font-size: 0.85rem;
+	font-size: 90%;
 	text-transform: lowercase;
 }
 
@@ -610,7 +608,7 @@ pre {
 	/* Reset margins since the wrapper handles spacing */
 	margin: 0;
 	padding: 2rem;
-	font-size:0.75rem;
+	font-size:90%;
 }
 
 code {
@@ -635,7 +633,7 @@ code {
 	background-color: AccentColor;
 	border: 0;
 	padding: 5px 10px;
-	font-size: 0.75rem;
+	font-size: 90%;
 	border-radius: 4px;
 	cursor: pointer;
 	backdrop-filter: blur(4px);
@@ -646,6 +644,12 @@ code {
 /* Show button when hovering the wrapper */
 .code-wrapper:hover .copy-code-button {
 	opacity: 1;
+}
+
+@supports (-webkit-touch-callout: none) {
+	.code-wrapper .copy-code-button {
+		opacity: 1;
+	}
 }
 
 .copy-code-button:hover {

@@ -14,15 +14,13 @@ pagination:
   
 {% for post in pagination.items %}
   <article>
-            <h2>
                 <a href="{{ post.url | url }}">
-                    {% if post.data.title %}
+                    <h2>{% if post.data.title %}
                         {{ post.data.title }}
                     {% else %}
                         Untitled
-                    {% endif %}
+                    {% endif %}</h2>
                 </a>
-            </h2>
 		        <div class="h4"><time datetime="{{ post.date }}">{{ post.date | readableDate(lang) }}</time></div>
             {% if post.data.description %}
                 <p>
@@ -46,7 +44,7 @@ pagination:
       {% endif %}
     </div>
 
-    <div class="page-count" style="flex: 1; text-align: center; font-weight: bold;">
+    <div class="page-count" style="flex: 1; text-align: center;">
       {{ 'page_label' | t }} 
       {{ pagination.pageNumber + 1 }} 
       {{ 'of_label' | t }} 

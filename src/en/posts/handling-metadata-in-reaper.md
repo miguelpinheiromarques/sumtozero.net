@@ -24,7 +24,7 @@ Even for a gapless record, regions help visualize where specific parts begin and
 The Metadata Template
 I took a cue from Reaper's built-in system designed for DDP export and developed a standard region naming template.
 
-My Template:
+#### My region title template:
 
 ```
 #TITLE=Title|PERFORMER=Artist|COMPOSER=Composer|LYRICIST=Lyricist|ISRC=PTKNU2600001|VERSION=1|VINYL=A1

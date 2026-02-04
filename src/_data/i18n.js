@@ -8,24 +8,24 @@ module.exports = {
 	pt: "um blog sobre áudio, masterização, design de estúdios & acústica"
   },	
 	read_more: {
-    en: "Read More →",
-    pt: "Ler Mais →"
+    en: "Read more →",
+    pt: "Ler mais →"
   },
 	next_post: {
-    en: "Next Post →",
-    pt: "Próximo Artigo →"
+    en: "Next post →",
+    pt: "Próximo artigo →"
   },
   previous_post: {
-    en: "← Previous Post",
-    pt: "← Artigo Anterior"
+    en: "← Previous post",
+    pt: "← Artigo anterior"
   },
 newer_posts: {
-    en: "← Newer Posts",
-    pt: "← Artigos Mais Recentes"
+    en: "← Newer posts",
+    pt: "← Artigos mais recentes"
   },
   older_posts: {
-    en: "Older Posts →",
-    pt: "Artigos Mais Antigos →"
+    en: "Older posts →",
+    pt: "Artigos mais antigos →"
   },	
 page_label: {
     en: "Page",
@@ -48,7 +48,7 @@ page_label: {
 	pt: "Contacto"
   },	
   select_language: {
-	en: "Select Language",
+	en: "Select language",
 	pt: "Selecionar idioma"
   }
 };
