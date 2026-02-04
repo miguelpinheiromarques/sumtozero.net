@@ -103,10 +103,19 @@ eleventyConfig.addCollection("posts_pt", function(collectionApi) {
     return content;
   });
   
-  eleventyConfig.addFilter("removeCss", function(content) {
+  eleventyConfig.addFilter("cleanFeed", function(content) {
     if (!content) return "";
-    // Regex to delete any <link> tag
-    return content.replace(/<link[^>]+>/g, "");
+    
+    // 1. Remove <link> tags (CSS, Fonts) - Handles multi-line tags
+    content = content.replace(/<link[\s\S]*?>/gi, "");
+    
+    // 2. Remove <script> tags (Just in case)
+    content = content.replace(/<script[\s\S]*?<\/script>/gi, "");
+    
+    // 3. Remove <html>, <head>, <body> wrappers if they leaked in
+    content = content.replace(/<\/?(html|head|body)[^>]*>/gi, "");
+    
+    return content;
   });
 
   // Add the global variable "year"
