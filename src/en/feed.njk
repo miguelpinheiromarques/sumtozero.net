@@ -10,7 +10,7 @@ metadata:
   url: "https://sumtozero.net/en/"
   author:
     name: "Miguel Pinheiro Marques"
-    email: "me@miguelpinheiromarques.com"
+    email: "miguel@knurlmastering.com"
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -26,11 +26,8 @@ metadata:
     {% set absolutePostUrl %}{{ site.url }}{{ post.url }}{% endset %}
     <item>
       <title>{{ post.data.title | escape }}</title> 
-      
       <link>{{ absolutePostUrl }}</link>
-      
-      <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | escape }}</description>
-      
+      <description><![CDATA[ {{ post.templateContent | stripCss | htmlToAbsoluteUrls(absolutePostUrl) | safe }} ]]></description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <guid>{{ absolutePostUrl }}</guid>
     </item>

@@ -102,6 +102,12 @@ eleventyConfig.addCollection("posts_pt", function(collectionApi) {
     }
     return content;
   });
+  
+  eleventyConfig.addFilter("stripCss", function(content) {
+    if (!content) return "";
+    // Regex to remove <link> tags completely
+    return content.replace(/<link[^>]+>/g, "");
+  });
 
   // Add the global variable "year"
   eleventyConfig.addGlobalData("year", () => {
