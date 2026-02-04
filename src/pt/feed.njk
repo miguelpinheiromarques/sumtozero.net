@@ -25,8 +25,11 @@ metadata:
     <item>
       <title>{{ post.data.title | escape }}</title> 
       <link>{{ absolutePostUrl }}</link>
-      <description><![CDATA[ {{ post.templateContent | stripCss | htmlToAbsoluteUrls(absolutePostUrl) | safe }} ]]></description>
-      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+      <description>
+        <![CDATA[
+          {{ post.templateContent | removeCss | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
+        ]]>
+      </description>      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
     {%- endfor %}

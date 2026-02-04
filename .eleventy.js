@@ -103,9 +103,9 @@ eleventyConfig.addCollection("posts_pt", function(collectionApi) {
     return content;
   });
   
-  eleventyConfig.addFilter("stripCss", function(content) {
+  eleventyConfig.addFilter("removeCss", function(content) {
     if (!content) return "";
-    // Regex to remove <link> tags completely
+    // Regex to delete any <link> tag
     return content.replace(/<link[^>]+>/g, "");
   });
 
