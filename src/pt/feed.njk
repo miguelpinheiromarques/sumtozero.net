@@ -1,6 +1,7 @@
 ---
 permalink: /pt/feed.xml
 eleventyExcludeFromCollections: true
+layout: null
 metadata:
   title: "Miguel - Portfólio de Áudio"
   subtitle: "Reflexões sobre masterização, design de estúdios e educação."
@@ -25,10 +26,8 @@ metadata:
     <item>
       <title>{{ post.data.title | escape }}</title> 
       <link>{{ absolutePostUrl }}</link>
-<description>
-        {{ post.templateContent | cleanFeed | htmlToAbsoluteUrls(absolutePostUrl) | escape }}
-      </description>
-      </description>      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+      <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | escape }}</description>
+      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
     {%- endfor %}

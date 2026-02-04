@@ -1,8 +1,7 @@
 ---
-# URL where the feed will live
 permalink: /en/feed.xml
-# Don't add the feed itself to the blog list
 eleventyExcludeFromCollections: true
+layout: null
 metadata:
   title: "Your Name - Audio Portfolio"
   subtitle: "Thoughts on mastering, studio design, and education."
@@ -27,9 +26,7 @@ metadata:
     <item>
       <title>{{ post.data.title | escape }}</title> 
       <link>{{ absolutePostUrl }}</link>
-<description>
-        {{ post.templateContent | cleanFeed | htmlToAbsoluteUrls(absolutePostUrl) | escape }}
-      </description>
+      <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | escape }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
