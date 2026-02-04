@@ -645,8 +645,8 @@ code {
 .code-wrapper:hover .copy-code-button {
 	opacity: 1;
 }
-
-@supports (-webkit-touch-callout: none) {
+@media (any-hover: none) {
+	pre {padding:4rem 2rem}
 	.code-wrapper .copy-code-button {
 		opacity: 1;
 	}

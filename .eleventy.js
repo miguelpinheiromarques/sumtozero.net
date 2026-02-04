@@ -94,6 +94,14 @@ eleventyConfig.addCollection("posts_pt", function(collectionApi) {
 
   // Add RSS plugin
   eleventyConfig.addPlugin(pluginRss);  
+  
+  eleventyConfig.addTransform("xmlfix", function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".xml")) {
+      // Find "crossorigin" without a value and give it one
+      return content.replace(/ crossorigin(?!=")/g, ' crossorigin="anonymous"');
+    }
+    return content;
+  });
 
   // Add the global variable "year"
   eleventyConfig.addGlobalData("year", () => {
