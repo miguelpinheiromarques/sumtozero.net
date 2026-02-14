@@ -20,16 +20,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/_redirects");  
 
 eleventyConfig.addCollection("posts_en", function(collectionApi) {
-  return collectionApi.getAll().filter(item => 
-    item.url.startsWith("/en/posts/") && !item.url.endsWith("/posts/")
-  );
-});
+    return collectionApi.getAll()
+      .filter(item => item.url.startsWith("/en/posts/") && !item.url.endsWith("/posts/"))
+      // ⬇️ ADD THIS: Force sorting by date descending (Newest first)
+      .sort((a, b) => b.date - a.date);
+  });
 
 eleventyConfig.addCollection("posts_pt", function(collectionApi) {
-  return collectionApi.getAll().filter(item => 
-    item.url.startsWith("/pt/posts/") && !item.url.endsWith("/posts/")
-  );
-});
+    return collectionApi.getAll()
+      .filter(item => item.url.startsWith("/pt/posts/") && !item.url.endsWith("/posts/"))
+      // ⬇️ ADD THIS: Force sorting by date descending (Newest first)
+      .sort((a, b) => b.date - a.date);
+  });
 
 // Filter to find a page by translationKey and language
   eleventyConfig.addFilter("getLocalizedUrl", function(translationKey, targetLang, allPages) {
