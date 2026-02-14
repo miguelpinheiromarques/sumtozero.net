@@ -225,6 +225,9 @@ h4,.h4 {
 #contact a:hover{text-decoration-color:var(--txt1);}
 
 .page-count{font-size:80%;font-weight:300;}
+.pagination a,.pagination a:visited{font-style:italic;text-decoration:none}
+.pagination a:hover{text-decoration:underline;text-decoration-color: var(--ntrl1)}
+
 form {
 	margin-right: 20px;
 }
