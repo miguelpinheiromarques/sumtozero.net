@@ -12,11 +12,11 @@
     
     {# 2. Ensure Image URL is absolute (starts with http) #}
     {% if "http" not in socialImage %}
-      {% set socialImage = site.url + socialImage %}
+      {% set socialImage = settings.url + socialImage %}
     {% endif %}
     
     {# 3. Define the current page URL #}
-    {% set currentUrl = site.url + page.url %}
+    {% set currentUrl = settings.url + page.url %}
     
     <meta property="og:site_name" content="sumtozero.net">
     <meta property="og:url" content="{{ currentUrl }}">
@@ -40,22 +40,22 @@
     {% for code in supportedLanguages %}
       {% set localizedUrl = translationKey | getLocalizedUrl(code, collections.all) %}  
       {% if localizedUrl %}
-    <link rel="alternate" hreflang="{{ code }}" href="{{ site.url }}{{ localizedUrl }}" />
+    <link rel="alternate" hreflang="{{ code }}" href="{{ settings.url }}{{ localizedUrl }}" />
       {% endif %}
     {% endfor %}
     
     {% set defaultUrl = translationKey | getLocalizedUrl("en", collections.all) %}
     
     {% if defaultUrl %}
-    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ defaultUrl }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ settings.url }}{{ defaultUrl }}" />
     {% endif %}	
 
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<link rel="icon" href="/favicon.ico" sizes="32x32">
 
-	<link rel="alternate" type="application/rss+xml" title="RSS Feed (English)" href="{{ site.url }}/en/feed.xml" />
-	<link rel="alternate" type="application/rss+xml" title="RSS Feed (Português)" href="{{ site.url }}/pt/feed.xml" />	  
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed (English)" href="{{ settings.url }}/en/feed.xml" />
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed (Português)" href="{{ settings.url }}/pt/feed.xml" />	  
 	  
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

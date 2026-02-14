@@ -31,7 +31,7 @@ module.exports = function (eleventyConfig) {
     }
   
     // 4. Fallback if no image is found in the post
-    return "/static/img/default-og.jpg"; 
+    return "/static/sumtozero_og.png"; 
   });
 
   // Redirect to homepage  
