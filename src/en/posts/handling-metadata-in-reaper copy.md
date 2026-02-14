@@ -16,23 +16,23 @@ One of the key reasons I love using Reaper for mastering is its ability to handl
 
 The primary way I manage this is by attaching metadata directly to Regions.
 
-### Why Regions?
+## Why Regions?
 Working with regions in Reaper makes perfect sense for mastering, especially when dealing with time-constrained audio like a single song, an album, or movements in a classical piece.
 
 Even for a gapless record, regions help visualize where specific parts begin and end. They allow you to jump between sections instantly and make cuts to process sections separately if needed—even if you ultimately export everything as a single continuous file.
 
-#### The Metadata Template
+**The Metadata Template**
 I took a cue from Reaper's built-in system designed for DDP export and developed a standard region naming template.
-
-#### My region title template:
 
 ```
 #TITLE=Title|PERFORMER=Artist|COMPOSER=Composer|LYRICIST=Lyricist|ISRC=PTKNU2600001|VERSION=1|VINYL=A1
 ```
 
+#### My region title template
+
 For each region, I paste this template and edit the fields for that specific track. This allows me to input granular data that can be retrieved later using wildcards during the render process.
 
-#### Breakdown of Fields
+### Breakdown of Fields
 - Standard Fields: TITLE, PERFORMER, COMPOSER, LYRICIST, and ISRC are self-explanatory standard tags.
 - VERSION: This is used internally. If a track undergoes revisions, I can easily trace the version number in the filename.
 - VINYL: Since I frequently master for vinyl, this field allows me to designate sides (e.g., A1, A2, B1, C4). For streaming the region ID determines track ordering (1, 2, 3...) but for vinyl releases I extract the wildcard from this field to determine sequencing on the physical medium.
@@ -48,7 +48,7 @@ I store this in the Project Settings:
 - Click the Notes tab.
 - Fill in the "Title" (Album Name) and "Author" (Album Artist) fields.
 
-### Exporting Digital Files
+## Exporting Digital Files
 Once the regions are named, the next step is instructing Reaper to use that text as metadata.
 
 In the Render to File window:
@@ -57,8 +57,9 @@ In the Render to File window:
 - For example, to map the Track Title, you would use: $region(#TITLE)[|]<br/>*Note on Syntax: The [|] at the end of the wildcard tells Reaper to stop reading at the pipe character | used in our region template.*
 
 ![Reaper Render Metadata with wildcards](/static/img/project_render_metadata.png "Reaper Render Metadata with wildcards")
+#### Reaper Render Metadata window with the wildcards template we currently use at Knurl Mastering.
 
-#### File Naming Pattern
+## File Naming Pattern
 I also use these wildcards for the actual filenames. Our studio's standard naming pattern looks like this:
 
 ```
@@ -67,7 +68,7 @@ $region(PERFORMER)[|] - $regionnumber $region(#TITLE)[|] v$region(VERSION)[|]
 
 This automatically generates filenames like: *Artist Name - 01 Song Title v1.wav*
 
-### Handling DDPs and CD-TEXT
+## Handling DDPs and CD-TEXT
 While the system above works perfectly for digital files, Audio CDs (DDP images) require a specialized approach. DDPs rely on specific markers to identify track start points, indices, and CD-TEXT.
 
 Reaper has native DDP support, but manually placing markers and typing out metadata for them is tedious and prone to error. Fortunately, Reaper allows for scripting.

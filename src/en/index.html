@@ -21,13 +21,13 @@ pagination:
                     {% endif %}</h2>
                 </a>
           
-		      <div class="h4"><time datetime="{{ post.date }}">{{ post.date | readableDate(lang) }}</time></div>
           
             {% if post.data.description %}
                 <p>
                     {{ post.data.description }}
                 </p>
             {% endif %}
+          <div class="h4"><time datetime="{{ post.date }}">{{ post.date | readableDate(lang) }}</time></div>
 
             <p>
               <a href="{{ post.url }}" class="read-more">{{ 'read_more' | t }}</a>

@@ -16,7 +16,7 @@ Uma das principais razões pelas quais adoro usar o Reaper para masterização �
 
 A forma principal como giro isto é anexando os metadados diretamente às regiões (Regions).
 
-### Porquê Regiões?
+## Porquê Regiões?
 Trabalhar com regiões no Reaper faz todo o sentido para masterização, especialmente quando se lida com áudio delimitado no tempo, como uma música individual, um álbum, ou movimentos numa peça de música clássica.
 
 Mesmo para um disco gapless (sem pausas), as regiões ajudam a visualizar onde começam e acabam partes específicas. Permitem saltar entre secções instantaneamente e fazer cortes para processar secções separadamente se necessário — mesmo que, no final, exporte tudo como um único ficheiro contínuo.
@@ -29,7 +29,7 @@ Inspirei-me no sistema nativo do Reaper desenhado para exportação de DDP e des
 
 Para cada região, uso este modelo e edito os campos para essa faixa específica. Isto permite-me inserir dados granulares que podem ser recuperados mais tarde usando wildcards durante o processo de render.
 
-#### Detalhe dos Campos
+### Detalhe dos Campos
 - Campos Padrão: TITLE, PERFORMER, COMPOSER, LYRICIST e ISRC são etiquetas (tags) padrão autoexplicativas.
 - VERSION: Usado internamente. Se uma faixa for alvo de revisões, consigo facilmente identificar o número da versão no nome do ficheiro.
 - VINYL: Como masterizo frequentemente para vinil, este campo permite-me designar os lados (ex: A1, A2, B1, C4). Para streaming o ID da região determina a ordem das faixas (1, 2, 3...) mas para vinyl extraio o wildcard deste campo para determinar a sequência.
@@ -43,7 +43,7 @@ Enquanto os metadados da região lidam com detalhes ao nível da faixa, também 
 - Clicar no separador Notes.
 - Preencher os campos "Title" (Nome do Álbum) e "Author" (Artista do Álbum).
 
-### Exportar Ficheiros Digitais
+## Exportar Ficheiros Digitais
 Assim que as regiões estiverem nomeadas, o próximo passo é instruir o Reaper a usar esse texto como metadados.
 
 - Na janela Render to File:
@@ -53,7 +53,7 @@ Assim que as regiões estiverem nomeadas, o próximo passo é instruir o Reaper 
 
 ![Reaper Render Metadata com wildcards](/static/img/project_render_metadata.png "Reaper Render Metadata with wildcards")
 
-#### Padrão de Nomeação de Ficheiros
+## Padrão de Nomeação de Ficheiros
 Também uso estes wildcards para gerir nomes dos ficheiros para exportação. O padrão de nomeação habitual do nosso estúdio é:
 
 ```
@@ -62,7 +62,7 @@ $region(PERFORMER)[|] - $regionnumber $region(#TITLE)[|] v$region(VERSION)[|]
 
 Isto gera automaticamente nomes de ficheiros como: *Nome do Artista - 01 Título da Música v1.wav*
 
-### Gerir DDPs e CD-TEXT
+## Gerir DDPs e CD-TEXT
 Enquanto o sistema acima funciona perfeitamente para ficheiros digitais, os CDs de Áudio (imagens DDP) requerem uma abordagem especializada. Os DDPs dependem de marcadores (markers) específicos para identificar pontos de início de faixa, índices e CD-TEXT.
 
 O Reaper tem suporte nativo para DDP, mas colocar marcadores manualmente e escrever os metadados para eles é entediante e propenso a erros. Felizmente, o Reaper permite a criação de scripts. Escrevi um script em Lua que automatiza todo este processo. O script extrai toda a informação que já inserimos nas regiões, limpa caracteres especiais e converte-os para marcadores específicos necessários para um DDP válido.
