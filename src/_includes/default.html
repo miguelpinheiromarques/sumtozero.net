@@ -6,6 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}} - sumtozero.net</title>
     {% if description %}<meta name="description" content="{{description}}"/>{% endif %}
+    
+    {# 1. Prepare the Image URL using your new filter #}
+    {% set socialImage = content | extractFirstImage %}
+    
+    {# 2. Ensure Image URL is absolute (starts with http) #}
+    {% if "http" not in socialImage %}
+      {% set socialImage = site.url + socialImage %}
+    {% endif %}
+    
+    {# 3. Define the current page URL #}
+    {% set currentUrl = site.url + page.url %}
+    
+    <meta property="og:site_name" content="sumtozero.net">
+    <meta property="og:url" content="{{ currentUrl }}">
+    <meta property="og:title" content="{{ title }}"> 
+    <meta property="og:image" content="{{ socialImage }}">
+    <meta property="og:type" content="{% if '/posts/' in page.url %}article{% else %}website{% endif %}">
+    <meta property="og:locale" content="{% if lang == 'pt' %}pt_PT{% else %}en_US{% endif %}">
+    
+    {% if description %}
+      <meta property="og:description" content="{{ description }}">
+    {% endif %}
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:image" content="{{ socialImage }}">
+    
+    {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
     {% block head %}{% endblock %}
 
     {% set supportedLanguages = ["en", "pt"] %}
@@ -34,6 +62,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css"/>
     <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"></noscript>
+    
+    
     
   </head>
   <body>

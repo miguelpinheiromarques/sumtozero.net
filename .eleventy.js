@@ -4,6 +4,7 @@ const htmlmin = require("html-minifier");
 const { I18nPlugin } = require("@11ty/eleventy");
 const i18n = require('./src/_data/i18n.js');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { JSDOM } = require("jsdom");
 
 module.exports = function (eleventyConfig) {
   // Set your primary language
@@ -14,6 +15,23 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("t", function(key) {
     const lang = this.page.lang || 'en'; // Detect current page language
     return i18n[key][lang] || key; // Return translation or the key itself if missing
+  });
+  
+  eleventyConfig.addFilter("extractFirstImage", function (content) {
+    // 1. If there's no content, return a default image
+    if (!content || content.length === 0) return "/static/sumtozero_og.png";
+  
+    // 2. Parse the HTML content
+    const dom = new JSDOM(content);
+    const img = dom.window.document.querySelector("img");
+  
+    // 3. If an image is found, return its source
+    if (img) {
+      return img.src;
+    }
+  
+    // 4. Fallback if no image is found in the post
+    return "/static/img/default-og.jpg"; 
   });
 
   // Redirect to homepage  
