@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
   
   eleventyConfig.addFilter("extractFirstImage", function (content) {
     // 1. If there's no content, return a default image
-    if (!content || content.length === 0) return "/static/sumtozero_og.png";
+    if (!content || content.length === 0) return "/static/img/sumtozero_og.png";
   
     // 2. Parse the HTML content
     const dom = new JSDOM(content);
@@ -31,7 +31,7 @@ module.exports = function (eleventyConfig) {
     }
   
     // 4. Fallback if no image is found in the post
-    return "/static/sumtozero_og.png"; 
+    return "/static/img/sumtozero_og.png"; 
   });
 
   // Redirect to homepage  
