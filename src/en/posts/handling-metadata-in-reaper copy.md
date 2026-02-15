@@ -21,7 +21,8 @@ Working with regions in Reaper makes perfect sense for mastering, especially whe
 
 Even for a gapless record, regions help visualize where specific parts begin and end. They allow you to jump between sections instantly and make cuts to process sections separately if needed—even if you ultimately export everything as a single continuous file.
 
-**The Metadata Template**
+### The Metadata Template
+
 I took a cue from Reaper's built-in system designed for DDP export and developed a standard region naming template.
 
 ```
