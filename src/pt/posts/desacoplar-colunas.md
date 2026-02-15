@@ -17,7 +17,7 @@ Quando uma coluna é colocada diretamente num suporte ou numa mesa sem desacopla
 Para além da gestão de graves, o desacoplamento melhora a resposta a transientes da coluna. Quando a coluna tem liberdade para vibrar contra uma superfície rígida, os micro-movimentos podem distorcer o ataque inicial de um som, particularmente nos médios-graves. Um desacoplamento adequado estabiliza a coluna, permitindo que os altifalantes parem e arranquem com maior precisão. O resultado é um uma imagem stereo mais definido, melhor profundidade de campo e um ambiente de escuta onde se pode confiar que o que se ouve é o que esta realmente gravado, e não a ressonância do mobiliário ou da sala.
 
 ![A sala de mastering original da Arda Recorders durante a instalação das colunas em 2020.](/static/img/atc_sylomer_arda.jpg "A sala de mastering original da Arda Recorders durante a instalação das colunas em 2020.")
-#### Image 2. A sala de mastering original da Arda Recorders durante a instalação das colunas ATC SCM110ASL Pro em 2020.
+#### Image 2. A sala de mastering original da Arda Recorders durante a instalação das colunas em 2020, com as ATC SCM110ASL Pro totalmente desacopladas dentro de uma caixa ainda aberta, para permitir medições e o ajuste dos apoios.
 
 ## O desacoplamento apenas na base da coluna é suficiente?
 
@@ -25,7 +25,7 @@ Isto levanta uma questão comum relacionada com a física: se uma coluna está a
 
 Para obter o melhor dos dois mundos, desacoplamento e estabilidade, podemos introduzir mais massa na equação. Uma solução muito eficaz passa por colocar um bloco pesado de pedra, granito ou betão diretamente sob a coluna, com os apoios de isolamento colocados por baixo dessa laje. Isto aumenta a inércia total do sistema. A massa pesada atua como uma âncora que resiste ao recuo da caixa, permitindo que os altifalantes disparem a partir de uma posição estável, enquanto o material de isolamento por baixo continua a fazer o seu trabalho de impedir que a energia se propague para a estrutura do edifício.
 
-Para sistemas embutidos como o ilustrado na fotografia acima, a melhor abordagem é desacoplar totalmente a coluna, fazendo-a flutuar no topo, na base e nas laterais. A forma mais prática de o fazer é montar a coluna dentro de uma caixa pesada e amortecida, fixando-a sob pressão com apoios de desacoplamento ou molas à sua volta. O conjunto completo pode então ser instalado na parede como uma só unidade. Isto proporciona os melhores resultados acústicos e facilita a manutenção futura, uma vez que o sistema desacoplado (caixa + coluna) pode ser removido como uma peça só, ainda que torne os cálculos iniciais de carga ligeiramente mais complexos
+Para configurações embutidas, a coluna deve idealmente ser desacoplada omnidirecionalmente: flutuando no topo, na base e nas laterais. O método mais eficaz é alojar a coluna dentro de uma caixa pesada e amortecida, fixando-a sob pressão contra apoios de isolamento ou molas. Todo este módulo é instalado na parede como uma só peça. Embora isto aumente a complexidade dos cálculos de carga - pois agora é necessário contabilizar não só a distribuição de peso da própria coluna, mas também a força descendente exercida pelos apoios/molas comprimidos no topo - maximiza o isolamento e permite que o sistema (caixa + coluna) seja removido como uma unidade única para manutenção.
 
 ## O que funciona para o desacoplamento (e o que não funciona)
 

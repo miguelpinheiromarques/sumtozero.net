@@ -17,7 +17,7 @@ When a loudspeaker is placed directly on a stand or desk without decoupling, the
 Beyond just bass management, decoupling improves the speaker's transient response. When a cabinet is free to vibrate against a rigid surface, micro-movements can smear the initial attack of a sound, particularly in the lower mid range. Proper isolation stabilizes the speaker, allowing the drivers to stop and start more precisely. The result is a more defined "phantom center," better depth of field, and a monitoring environment where you can trust that what you are hearing is the source material, not the resonance of your furniture or room.
 
 ![The original mastering room at Arda Recorders during loudspeaker installation in 2020.](/static/img/atc_sylomer_arda.jpg "The original mastering room at Arda Recorders during loudspeaker installation in 2020.")
-#### Image 2. The original mastering room at Arda Recorders during loudspeaker installation in 2020, with ATC SCM110ASL Pro speakers fully decoupled.
+#### Image 2. The original mastering room at Arda Recorders during loudspeaker installation in 2020, showing the ATC SCM110ASL Pro speakers fully decoupled inside an unsealed enclosure to allow for measurements and pad adjustment.
 
 ## Is bottom-only decoupling enough?
 
@@ -25,7 +25,7 @@ This brings up a common concern regarding physics: if a speaker is only 'floatin
 
 To get the best of both worlds - decoupling and stability - you can introduce mass to the equation. A highly effective solution is to place a heavy slab of stone, granite, or concrete directly under the speaker, with the isolation pads or springs placed underneath that slab. This increases the total inertia of the system. The heavy mass acts as an anchor that resists the cabinet's recoil, allowing the drivers to fire from a stable position, while the isolation material underneath continues to do its job of preventing energy from leaking into the building structure.
 
-For in-wall configurations, the loudspeaker should ideally be decoupled omnidirectionally: floating from the top, bottom, and sides. The most effective method is to house the speaker within a heavy, dampened box, 'press-fitting' it against the isolation pads or springs under compression. This entire module is then installed into the wall. While this increases the complexity of the load calculations, it maximizes isolation and allows the system (box + loudspeaker) to be removed as a single unit for maintenance.
+For in-wall configurations, the loudspeaker should ideally be decoupled omnidirectionally: floating from the top, bottom, and sides. The most effective method is to house the speaker within a heavy, dampened box, 'press-fitting' it against isolation pads or springs under compression. This entire module is then installed into the wall. While this increases the complexity of the load calculations - as you must now account not only for the speaker's weight distribution but also for the additional downward force exerted by the compressed top pads/springs - it maximizes isolation and allows the system (box + loudspeaker) to be removed as a single unit for maintenance.
 
 ## What works for decoupling (and what doesn't)
 

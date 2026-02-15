@@ -3,8 +3,8 @@ permalink: /pt/feed.xml
 eleventyExcludeFromCollections: true
 layout: null
 metadata:
-  title: "sumtozero.net, a blog my Miguel Pinheiro Marques"
-  subtitle: "Reflexões sobre masterização, design de estúdios e educação."
+  title: "sumtozero.net, um blog por Miguel Pinheiro Marques"
+  subtitle: "Um blog sobre áudio, masterização, design de estúdios & acústica"
   language: "pt"
   url: "https://sumtozero.net/pt/"
   author:
@@ -12,7 +12,10 @@ metadata:
     email: "miguel@knurlmastering.com"
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>{{ metadata.title }}</title>
     <description>{{ metadata.subtitle }}</description>
@@ -20,15 +23,27 @@ metadata:
     <atom:link href="{{ site.url }}{{ permalink }}" rel="self" type="application/rss+xml" />
     <language>{{ metadata.language }}</language>
     
-    {# Loop through Portuguese posts, newest first #}
     {%- for post in collections.posts_pt | reverse %}
     {% set absolutePostUrl %}{{ site.url }}{{ post.url }}{% endset %}
     <item>
       <title>{{ post.data.title | escape }}</title> 
       <link>{{ absolutePostUrl }}</link>
-      <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | escape }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <guid>{{ absolutePostUrl }}</guid>
+      
+      {# 1. The Short Description (Text only) #}
+      <description>{{ post.data.description | escape }}</description>
+      
+      {# 2. The Rich Content (Where images live) #}
+      <content:encoded>
+        {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+      </content:encoded>
+
+      {# 3. The Featured Image (For reader previews) #}
+      {% if post.data.featuredImage %}
+      <media:content url="{{ site.url }}{{ post.data.featuredImage }}" medium="image" />
+      <enclosure url="{{ site.url }}{{ post.data.featuredImage }}" length="0" type="image/jpeg" />
+      {% endif %}
     </item>
     {%- endfor %}
   </channel>
