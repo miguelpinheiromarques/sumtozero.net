@@ -1,3 +1,4 @@
+Sitemap: https://sumtozero.net/sitemap.xml
+
 User-agent: *
-Disallow: 
-Sitemap: https://miguelpinheiromarques.com/sitemap.xml
+Allow: /
