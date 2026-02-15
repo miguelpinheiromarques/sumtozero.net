@@ -12,6 +12,15 @@ module.exports = function (eleventyConfig) {
     url: "https://sumtozero.net"
   });  
   
+  eleventyConfig.addFilter("forceTime", function(dateObj) {
+    let d = new Date(dateObj);
+    // Set hours (8), minutes (45), seconds (0)
+    d.setUTCHours(8);
+    d.setUTCMinutes(45);
+    d.setUTCSeconds(0);
+    return d;
+  });  
+  
   // Set your primary language
   eleventyConfig.addPlugin(I18nPlugin, {
     defaultLanguage: "en",

@@ -29,7 +29,7 @@ metadata:
     <item>
       <title>{{ post.data.title | escape }}</title> 
       <link>{{ absolutePostUrl }}</link>
-      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+      <pubDate>{{ post.date | forceTime | dateToRfc822 }}</pubDate>
       <guid>{{ absolutePostUrl }}</guid>
 
       {# Text-only summary for simpler readers #}
