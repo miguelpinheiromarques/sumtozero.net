@@ -363,7 +363,9 @@ article a{text-decoration:underline;text-decoration-color:var(--ntrl2);}
 article a.read-more{font-style:italic;font-size:80%}
 article h2{margin:40px 0 0 0;padding:0;}
 article p {padding:0;margin:5px 0 20px 0;}
-article h4{text-align:center;margin:0 0 40px 0;padding:0 80px;}
+article h4{text-align:center;margin:0 0 40px 0;padding:0;}
+@media screen and (min-width: 48em) {article h4{text-align:center;margin:0 0 40px 0;padding:0 80px;}}
+
 .post .h4{margin:0 0 40px 0}
 
 section.credits {
