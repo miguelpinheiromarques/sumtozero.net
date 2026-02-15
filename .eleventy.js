@@ -119,12 +119,11 @@ eleventyConfig.addCollection("posts_pt", function(collectionApi) {
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
   // Copy favicon to route of /_site
-  eleventyConfig.addPassthroughCopy("./src/static/favicon.ico");
-  eleventyConfig.addPassthroughCopy("./src/static/favicon.svg");  
-  eleventyConfig.addPassthroughCopy("./src/static/apple-touch-icon.png");  
-
+  eleventyConfig.addPassthroughCopy({ "./src/static/favicon.ico": "favicon.ico" });
+  eleventyConfig.addPassthroughCopy({ "./src/static/favicon.svg": "favicon.svg" });  
+  eleventyConfig.addPassthroughCopy({ "./src/static/apple-touch-icon.png": "apple-touch-icon.png" });  
   // Copy robots to route of /_site  
-  eleventyConfig.addPassthroughCopy("./src/static/robots.txt");  
+  eleventyConfig.addPassthroughCopy({ "./src/static/robots.txt": "robots.txt" });  
 
   // Add RSS plugin
   eleventyConfig.addPlugin(pluginRss);  
