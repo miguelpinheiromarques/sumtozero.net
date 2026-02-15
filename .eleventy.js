@@ -7,6 +7,11 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { JSDOM } = require("jsdom");
 
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addGlobalData("site", {
+    url: "https://sumtozero.net"
+  });  
+  
   // Set your primary language
   eleventyConfig.addPlugin(I18nPlugin, {
     defaultLanguage: "en",
