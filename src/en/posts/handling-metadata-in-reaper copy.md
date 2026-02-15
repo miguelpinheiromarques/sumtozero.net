@@ -1,7 +1,7 @@
 ---
 title: Handling metadata when using Reaper for mastering
 description: A complete guide to handling mastering metadata in Reaper. Includes region templates, wildcard tips, and a custom script for automated DDP and CD-TEXT creation.
-date: 2026-01-03 09:00
+date: 2026-01-03
 author: Miguel Pinheiro Marques
 translationKey: "metadatareaper"
 permalink: "/en/posts/handling-metadata-when-using-reaper-for-mastering/" 

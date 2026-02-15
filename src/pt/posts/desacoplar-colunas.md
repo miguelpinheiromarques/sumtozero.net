@@ -1,7 +1,7 @@
 ---
 title: Um guia para desacoplar colunas em estúdios
 description: O desacoplamento das colunas em régies é uma prática recomendada que melhora significativamente a resposta do sistema escuta. Embora a acústica da sala seja a base fundamental, garantir que as colunas se encontram desacopladas dos seus stands ou paredes pode resultar em melhorias significativas no desempenho geral do sistema.
-date: 2026-02-14 08:00
+date: 2026-02-14
 author: Miguel Pinheiro Marques
 translationKey: "decouplingspeakers"
 permalink: "/pt/posts/um-guia-para-desacoplar-colunas/" 

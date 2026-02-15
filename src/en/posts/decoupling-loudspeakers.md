@@ -1,7 +1,7 @@
 ---
 title: Decoupling loudspeakers the right way
 description: Decoupling loudspeakers in control rooms is a best practice that significantly refines their response within the listening environment. While proper room acoustics are the critical foundation, ensuring your loudspeakers are effectively decoupled from their stands or walls can yield major improvements in the system's overall performance.
-date: 2026-02-14 08:00
+date: 2026-02-14
 author: Miguel Pinheiro Marques
 translationKey: "decouplingspeakers"
 permalink: "/en/posts/decoupling-loudspeakers/" 
