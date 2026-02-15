@@ -1,7 +1,7 @@
 ---
 title: Configurar metadata no Reaper em sessões de masterização
 description: Um guia completo para guardar e gerir metadata de discos em sessões do Reaper. Inclui templates para regiões, dicas para utilização de wildcards e scripts para gerir CD-TEXT de forma automática no processo de criação de DDP.
-date: 2026-01-03
+date: 2026-01-03 09:00
 author: Miguel Pinheiro Marques
 translationKey: "metadatareaper"
 permalink: "/pt/posts/configurar-metadata-no-reaper-para-masterização/" 
