@@ -39,6 +39,15 @@ textarea::placeholder,
 	font-weight:300;
 }
 
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub { 
+  top: 0.4em; 
+}
+
 input::placeholder,
 textarea::placeholder{
 	font-size:80%;
@@ -443,6 +452,8 @@ section.credits {
 	padding: 1rem;
 	border-radius: 0.25rem;
 }
+
+.about a{font-weight:600;font-style:italic}
 
 .book .signature {color:var(--txt1);margin-top:80px;}
 .book .signature svg {height:55px;width:auto;margin-left:0;}
