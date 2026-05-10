@@ -8,18 +8,18 @@ permalink: "/en/posts/handling-metadata-when-using-reaper-for-mastering/"
 tags: ["Mastering", "Reaper", "Scripts"]
 ---
 
-Handling metadata is a crucial step in mastering a record. It serves as an excellent tool for maintaining a well-organized and searchable digital archive, a necessity for any professional mastering studio. Clients often request files years after the process is complete, and proper metadata ensures those files can be easily located.
+Metadata handling matters more than it sounds in mastering. A well-organized, searchable archive is essential for any professional studio. Clients often request files years after the process is complete, and proper metadata ensures those files can actually be found.
 
-Beyond archiving, missing or incorrect metadata poses significant challenges for digital distribution. Furthermore, despite the dominance of streaming, CDs remain a vital part of the music industry. CD-TEXT has always been a valued feature for musicians, making the accurate printing of metadata to DDP master files a standard requirement.
+Missing or incorrect metadata also creates real problems for digital distribution. And despite the streaming numbers, CDs are still a meaningful part of the industry. Musicians care about CD-TEXT, which makes accurate DDP metadata a standard part of the job.
 
-One of the key reasons I love using Reaper for mastering is its ability to handle every task within a single project: audio processing, sequencing, and exporting. This centralization allows me to store a release’s metadata directly in the timeline and automate the export process.
+One reason I keep coming back to Reaper for mastering is that it handles everything in a single project: processing, sequencing, and exporting. That means I can store a release's metadata directly in the timeline and automate the exports.
 
-The primary way I manage this is by attaching metadata directly to Regions.
+The way I manage this is by attaching metadata directly to Regions.
 
 ## Why Regions?
-Working with regions in Reaper makes perfect sense for mastering, especially when dealing with time-constrained audio like a single song, an album, or movements in a classical piece.
+Working with regions in Reaper is a natural fit for mastering, especially for time-bounded material like a single track, an album, or movements in a classical piece.
 
-Even for a gapless record, regions help visualize where specific parts begin and end. They allow you to jump between sections instantly and make cuts to process sections separately if needed—even if you ultimately export everything as a single continuous file.
+Even for a gapless record, regions help visualize where specific parts begin and end. They let you jump between sections instantly and make cuts to process sections separately if needed, even if you ultimately export everything as a single continuous file.
 
 ### The Metadata Template
 
@@ -35,13 +35,13 @@ For each region, I paste this template and edit the fields for that specific tra
 
 ### Breakdown of Fields
 - Standard Fields: TITLE, PERFORMER, COMPOSER, LYRICIST, and ISRC are self-explanatory standard tags.
-- VERSION: This is used internally. If a track undergoes revisions, I can easily trace the version number in the filename.
-- VINYL: Since I frequently master for vinyl, this field allows me to designate sides (e.g., A1, A2, B1, C4). For streaming the region ID determines track ordering (1, 2, 3...) but for vinyl releases I extract the wildcard from this field to determine sequencing on the physical medium.
+- VERSION: Used internally. If a track undergoes revisions, I can trace the version number in the filename.
+- VINYL: Since I frequently master for vinyl, this field lets me designate sides (e.g., A1, A2, B1, C4). For streaming, the region ID determines track ordering (1, 2, 3...) but for vinyl releases I extract the wildcard from this field to determine sequencing on the physical medium.
 
-This approach ensures that separate sequencing for digital and vinyl releases is always saved within the project architecture.
+This way, separate sequencing for digital and vinyl is always saved in the project.
 
 ### Global Release Metadata
-While region metadata handles track-level details, I also need fields for the entire release (e.g., Album Artist, Album Title).
+Region metadata handles track-level details, but I also need fields for the entire release (e.g., Album Artist, Album Title).
 
 I store this in the Project Settings:
 
@@ -70,7 +70,7 @@ $region(PERFORMER)[|] - $regionnumber $region(#TITLE)[|] v$region(VERSION)[|]
 This automatically generates filenames like: *Artist Name - 01 Song Title v1.wav*
 
 ## Handling DDPs and CD-TEXT
-While the system above works perfectly for digital files, Audio CDs (DDP images) require a specialized approach. DDPs rely on specific markers to identify track start points, indices, and CD-TEXT.
+The system above works well for digital files, but Audio CDs (DDP images) require a different approach. DDPs rely on specific markers to identify track start points, indices, and CD-TEXT.
 
 Reaper has native DDP support, but manually placing markers and typing out metadata for them is tedious and prone to error. Fortunately, Reaper allows for scripting.
 
@@ -79,7 +79,7 @@ I wrote a Lua script that automates this entire process. It reads your Region na
 This script does two main things:
 
 - Converts Regions to Markers: It maps your region starts to track markers (#) and handles the special start (!) and end (@) markers required by the DDP standard.
-- Sanitizes Text: CD-TEXT is very strict about character sets (ASCII). The script automatically transliterates characters like “ç” to “c” or “ñ” to “n”. While not linguistically perfect, it prevents CD players from displaying garbage characters or rejecting the text entirely.
+- Sanitizes Text: CD-TEXT is very strict about character sets (ASCII). The script automatically transliterates characters like "ç" to "c" or "ñ" to "n". While not linguistically perfect, it prevents CD players from displaying garbage characters or rejecting the text entirely.
 
 ```
 --[[
