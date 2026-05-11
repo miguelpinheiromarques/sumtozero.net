@@ -21,6 +21,42 @@ module.exports = function (eleventyConfig) {
     return d;
   });  
   
+eleventyConfig.addShortcode("image", async function(src, alt, sizes, className, loading, widthsList) {
+    
+    // ⬇️ ADD THIS: Dynamically import the ESM module
+    const { default: Image } = await import("@11ty/eleventy-img");
+  
+    // Default to 'lazy' if no specific loading is passed
+    let loadingStrategy = loading || "lazy";
+  
+    // Default to global widths if no specific list is passed
+    let targetWidths = widthsList || [450, 900, 1200, 1800, 2400];
+  
+    let metadata = await Image(src, {
+      widths: targetWidths,
+      formats: ["webp", "jpeg"],
+      outputDir: "./_site/img/",
+      urlPath: "/img/",
+      // OPTIONAL: Slightly higher quality for professional photography
+      sharpWebpOptions: { quality: 85 },
+      sharpJpegOptions: { quality: 85 }
+    });
+  
+    let imageAttributes = {
+      class: className || "", // Fix: Empty string if class is undefined
+      sizes: sizes,
+      loading: loadingStrategy,
+      decoding: "async",
+      alt: alt
+    };
+  
+    // If it's eager (hero image), set priority to high
+    if (loadingStrategy === "eager") {
+      imageAttributes.fetchpriority = "high";
+    }
+  
+    return Image.generateHTML(metadata, imageAttributes);
+  });
   // Set your primary language
   eleventyConfig.addPlugin(I18nPlugin, {
     defaultLanguage: "en",

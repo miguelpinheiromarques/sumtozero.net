@@ -1,7 +1,7 @@
 ---
 title: Prepping audio cables
 description: When it comes to building custom audio cables, soldering gets all the glory. But a reliable, lifetime-guaranteed cable is born before the iron is even turned on. Proper cable prepping—specifically stripping and sleeving—is the unsung hero that dictates mechanical strength and longevity.
-date: 2026-05-04
+date: 2026-05-10
 author: Miguel Pinheiro Marques
 translationKey: "cableprepping"
 permalink: "/en/posts/prepping-audio-cables/"
