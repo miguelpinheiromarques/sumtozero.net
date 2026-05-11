@@ -16,8 +16,8 @@ When a loudspeaker sits directly on a stand or desk, the cabinet's mechanical en
 
 Decoupling also helps transient response. When a cabinet vibrates against a rigid surface, micro-movements smear transients, particularly in the lower mids. Isolation stabilizes the speaker, letting the drivers stop and start more precisely. You end up with better stereo definition, more depth of field, and a monitoring environment where what you hear is the source material, not your furniture resonating.
 
-![The original mastering room at Arda Recorders during loudspeaker installation in 2020.](/static/img/atc_sylomer_arda.jpg "The original mastering room at Arda Recorders during loudspeaker installation in 2020.")
-#### Image 2. The original mastering room at Arda Recorders during loudspeaker installation in 2020, showing the ATC SCM110ASL Pro speakers fully decoupled inside an unsealed enclosure to allow for measurements and pad adjustment.
+{% image "src/static/img/atc_sylomer_arda.jpg", "The original mastering room at Arda Recorders during loudspeaker installation in 2020.", "100vw", "article-image", "lazy" %}
+#### Image 1. The original mastering room at Arda Recorders during loudspeaker installation in 2020, showing the ATC SCM110ASL Pro speakers fully decoupled inside an unsealed enclosure to allow for measurements and pad adjustment.
 
 ## Is bottom-only decoupling enough?
 
@@ -35,8 +35,8 @@ True decoupling requires a material that acts as a tuned mechanical low-pass fil
 
 The critical factor in choosing these materials is static deflection: essentially, how much the material compresses under the speaker's weight. Decoupling is physics and for a pad to work it must be loaded correctly. If you place a light speaker on a stiff pad, the pad won't compress enough to act as a spring, and the vibrations will pass right through. The opposite is also true: if the speaker is too heavy for the pad, the material will bottom out and become a solid bridge.
 
-![Three examples of different Sylomer pads and spring mounts from AMC Mecanocaucho.](/static/img/sylomer_pad_springs.png "Three examples of different Sylomer pads and spring mounts from AMC Mecanocaucho.")
-#### Image 1. Three examples of different Sylomer pads and spring mounts from <a href="https://www.mecanocaucho.com" target="_blank" rel="noopener">AMC Mecanocaucho</a>.
+{% image "src/static/img/sylomer_pad_springs.png", "Three examples of different Sylomer pads and spring mounts from AMC Mecanocaucho.", "100vw", "article-image", "lazy" %}
+#### Image 2. Three examples of different Sylomer pads and spring mounts from <a href="https://www.mecanocaucho.com" target="_blank" rel="noopener">AMC Mecanocaucho</a>.
 
 ## Calculating the load: it's all about the maths
 
@@ -46,7 +46,8 @@ To solve this, you need to calculate the load per mounting point. If you are usi
 
 The last step is verification. Once the speakers are placed on the mounts, you must measure the deflection: the actual amount the spring or pad has compressed. For springs, measuring height is enough; for elastomers like Sylomer, you're looking for a specific percentage of compression (often around 10-20% depending on the type), to ensure the material is in its linear elastic region. If a pad isn't deflecting enough, it's acting as a solid block; squashed flat, it's bridging. Adjusting the number of pads or their position until you achieve uniform, specified deflection across all points is the only way to guarantee the system is truly decoupled.
 
-![Measuring deflection on individual Sylomer pads to ensure correct loading.](/static/img/atc_sylomer_ave_ruler.jpg "Measuring deflection on individual Sylomer pads to ensure correct loading")
+{% image "src/static/img/atc_sylomer_ave_ruler.jpg", "Measuring deflection on individual Sylomer pads to ensure correct loading.", "100vw", "article-image", "lazy" %}
+
 #### Image 3. Measuring deflection on individual Sylomer pads with the one and only <a href="https://www.youtube.com/@arduinoversusevil2025" target="_blank" rel="noopener">@AvE</a> ruler to ensure correct loading.
 
 ## Ready-made solutions: when you just want to plug and play

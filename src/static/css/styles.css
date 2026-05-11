@@ -358,7 +358,8 @@ header {
 	padding: 0
 }
 
-article img{width:100%;margin:1rem 0 0 0;padding:0;border:1px solid var(--ntrl2)}
+article img{width:100%;max-width: 100%;   /* Ensures it never overflows */
+	  height: auto;margin:1rem 0 0 0;padding:0;border:1px solid var(--ntrl2)}
 article a{text-decoration:underline;text-decoration-color:var(--ntrl2);}
 article a.read-more{font-style:italic;font-size:80%}
 article h2{margin:40px 0 0 0;padding:0;}

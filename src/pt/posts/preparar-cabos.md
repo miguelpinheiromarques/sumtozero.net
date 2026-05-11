@@ -12,7 +12,7 @@ A soldadura recebe toda a glória na construção de cabos. Toda a gente obceca 
 
 A forma como se faz o *stripping* dos condutores e se reveste as montagens é o que realmente determina se um cabo aguenta anos ou falha em seis meses. Aqui fica o que faço na preparação dos meus cabos, porque é que certos materiais importam e porque uso revestimento mecânico em vez de termo-retráctil.
 
-![Um cabo de áudio depois do stripping, antes e depois de ser preparado.](/static/img/cable_prepped.png "Um cabo de áudio depois do stripping, antes e depois de ser preparado.")
+{% image "src/static/img/cable_prepped.png", "Um cabo de áudio depois do stripping, antes e depois de ser preparado.", "100vw", "article-image", "eager" %}
 #### Imagem 1. Um cabo de áudio depois do stripping, antes e depois de ser preparado.
 
 ---
@@ -63,7 +63,7 @@ Aqui a consistência importa mais do que a velocidade. Fazer um corte nos fios d
 ### As ferramentas
 Não há links de afiliados aqui. As ferramentas que uso são da **Knipex**, e a razão é simples: são consistentes. Têm uma ferramenta para cada parte do trabalho. Corte, *stripping* de condutores internos finos, *stripping* de cabos individuais mais grossos, *stripping* de bainhas exteriores pesadas. Seja qual for o diâmetro com que se está a trabalhar, existe uma Knipex para isso. A foto abaixo dá uma boa ideia da variedade que tenho na bancada.
 
-![Várias ferramentas de stripping da Knipex.](/static/img/knipex_tools.png "Várias ferramentas de stripping da Knipex.")
+{% image "src/static/img/knipex_tools.png", "Várias ferramentas de stripping da Knipex.", "100vw", "article-image", "lazy" %}
 #### Imagem 2. Algumas das minhas ferramentas de *stripping*, todas da Knipex, para bainhas interiores e exteriores, para cabos de diferentes diâmetros (desde cabos finos individuais até *looms* multicondutores).
 
 ### Comprimentos de stripping
@@ -81,7 +81,7 @@ Em vez disso uso o **sistema de revestimento mecânico Hellermann**. A *sleeve* 
 ### Ferramentas, sleeves e lubrificação
 É preciso a <a href="https://www.hellermanntyton.com/products/application-tools-for-sleeves/ss/621-80008" target="_blank">ferramenta Hellermann SS</a> para as aplicar. É uma ferramenta de expansão de três pontas que estica a *sleeve* para que se possa deslizar sobre o cabo.
 
-![Ferramenta Hellermann SS a inserir uma sleeve num cabo de áudio.](/static/img/hellerman_tool.png "Ferramenta Hellermann SS a inserir uma sleeve num cabo de áudio.")
+{% image "src/static/img/hellerman_tool.png", "Ferramenta Hellermann SS a inserir uma sleeve num cabo de áudio.", "100vw", "article-image", "lazy" %}
 #### Imagem 3. Ferramenta Hellermann SS a inserir uma *sleeve* num cabo de áudio.
 
 Para a maioria das aplicações uso as *sleeves* **H20** (referência PRSH20X20BK). Não vêm pré-lubrificadas, por isso é preciso uma gota de <a href="https://www.hellermanntyton.com/products/chemicals/hellerine-m-284-ml/625-00001" target="_blank">óleo Hellerine M</a> para as colocar bem. As *sleeves* **A1** são ligeiramente maiores e já vêm pré-lubrificadas, sem necessidade de óleo. Encaixam na maioria dos multipairs até 4 canais, por vezes até 8, e estão disponíveis em várias cores, o que é útil para identificar tiragens num *loom* complexo.

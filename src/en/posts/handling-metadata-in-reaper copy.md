@@ -57,8 +57,8 @@ In the Render to File window:
 - Use wildcards to map your region data to ID3/WAV tags.
 - For example, to map the Track Title, you would use: $region(#TITLE)[|]<br/>*Note on Syntax: The [|] at the end of the wildcard tells Reaper to stop reading at the pipe character | used in our region template.*
 
-![Reaper Render Metadata with wildcards](/static/img/project_render_metadata.png "Reaper Render Metadata with wildcards")
-#### Reaper Render Metadata window with the wildcards template we currently use at Knurl Mastering.
+{% image "src/static/img/project_render_metadata.png", "Reaper Render Metadata with wildcards", "100vw", "article-image", "lazy" %}
+#### Image 1. Reaper Render Metadata window with the wildcards template we currently use at Knurl Mastering.
 
 ## File Naming Pattern
 I also use these wildcards for the actual filenames. Our studio's standard naming pattern looks like this:

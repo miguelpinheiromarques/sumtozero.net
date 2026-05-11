@@ -51,7 +51,8 @@ Na janela Render to File:
 - Usar wildcards para extrair os dados da região para tags ID3/WAV.
 - Por exemplo, para definir o Título da Faixa: $region(#TITLE)[|]
 
-![Reaper Render Metadata com wildcards](/static/img/project_render_metadata.png "Reaper Render Metadata with wildcards")
+{% image "src/static/img/project_render_metadata.png", "Reaper Render Metadata com wildcards", "100vw", "article-image", "lazy" %}
+#### Imagem 1. Convenção de nomenclatura para inserir metadata no Reaper usando wildcards.
 
 ## Padrão de nomeação de ficheiros
 Também uso estes wildcards para gerir os nomes dos ficheiros na exportação. O padrão habitual do nosso estúdio é:

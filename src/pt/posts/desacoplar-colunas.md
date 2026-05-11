@@ -16,8 +16,8 @@ Quando uma coluna é colocada directamente num suporte ou numa mesa sem desacopl
 
 O desacoplamento também ajuda a resposta a transientes. Quando a caixa vibra contra uma superfície rígida, os micro-movimentos distorcem o ataque inicial de um som, particularmente nos médios-graves. O isolamento estabiliza a coluna, deixando os drivers parar e arrancar com maior precisão. O resultado é uma imagem stereo mais definida, melhor profundidade de campo e um ambiente de escuta onde o que se ouve é o que está gravado, não a ressonância do mobiliário ou da sala.
 
-![A sala de mastering original da Arda Recorders durante a instalação das colunas em 2020.](/static/img/atc_sylomer_arda.jpg "A sala de mastering original da Arda Recorders durante a instalação das colunas em 2020.")
-#### Image 2. A sala de mastering original da Arda Recorders durante a instalação das colunas em 2020, com as ATC SCM110ASL Pro totalmente desacopladas dentro de uma caixa ainda aberta, para permitir medições e o ajuste dos apoios.
+{% image "src/static/img/atc_sylomer_arda.jpg", "A sala de mastering original da Arda Recorders durante a instalação das colunas em 2020.", "100vw", "article-image", "lazy" %}
+#### Imagem 1. A sala de mastering original da Arda Recorders durante a instalação das colunas em 2020, com as ATC SCM110ASL Pro totalmente desacopladas dentro de uma caixa ainda aberta, para permitir medições e o ajuste dos apoios.
 
 ## O desacoplamento apenas na base da coluna é suficiente?
 
@@ -35,8 +35,8 @@ O desacoplamento a sério requer um material que actue como um filtro mecânico 
 
 O fator crítico na escolha destes materiais é a deflexão estática: quanto é que o material comprime com o peso da coluna. O desacoplamento é física, não magia; para um apoio funcionar, tem de ser carregado correctamente. Se colocar uma coluna leve num apoio rígido, o apoio não comprime o suficiente para actuar como mola e as vibrações passam directamente. O contrário também é verdade: se a coluna for demasiado pesada, o material fica completamente esmagado e torna-se uma ponte sólida.
 
-![Três exemplos de diferentes apoios Sylomer e suportes de mola da AMC Mecanocaucho.](/static/img/sylomer_pad_springs.png "Três exemplos de diferentes apoios Sylomer e suportes de mola da AMC Mecanocaucho.")
-#### Image 1. Três exemplos de diferentes apoios Sylomer e suportes de mola da <a href="https://www.mecanocaucho.com" target="_blank" rel="noopener">AMC Mecanocaucho</a>.
+{% image "src/static/img/sylomer_pad_springs.png", "Três exemplos de diferentes apoios Sylomer e suportes de mola da AMC Mecanocaucho.", "100vw", "article-image", "lazy" %}
+#### Imagem 2. Três exemplos de diferentes apoios Sylomer e suportes de mola da <a href="https://www.mecanocaucho.com" target="_blank" rel="noopener">AMC Mecanocaucho</a>.
 
 ## Calcular a carga: é tudo uma questão de matemática
 
@@ -46,7 +46,7 @@ Para resolver isto, é necessário calcular a carga por ponto de montagem. Se es
 
 O último passo é a verificação. Uma vez colocadas as colunas nos suportes, é preciso medir a deflexão: a quantidade real que a mola ou o apoio comprimiu. Para molas, medir a altura chega; para elastómeros como o Sylomer, procura-se uma percentagem específica de compressão (frequentemente cerca de 10-20%, dependendo do tipo) para garantir que o material está na sua região elástica linear. Se um apoio não estiver a deflectir o suficiente, está a agir como um bloco sólido; esmagado, está a fazer ponte. Ajustar o número de apoios ou a sua posição até atingir uma deflexão uniforme e especificada em todos os pontos é a única forma de garantir que o sistema está verdadeiramente desacoplado.
 
-![Medição da deflexão em apoios Sylomer individuais para garantir a carga correta.](/static/img/atc_sylomer_ave_ruler.jpg "Medição da deflexão em apoios Sylomer individuais para garantir a carga correta")
+{% image "src/static/img/atc_sylomer_ave_ruler.jpg", "Medição da deflexão em apoios Sylomer individuais para garantir a carga correta.", "100vw", "article-image", "lazy" %}
 #### Imagem 3. Medição da deflexão em apoios Sylomer individuais com a régua do <a href="https://www.youtube.com/@arduinoversusevil2025" target="_blank" rel="noopener">@AvE</a>, para garantir a correcta deformação do apoio.
 
 ## Soluções prontas a usar: para quem não quer fazer contas

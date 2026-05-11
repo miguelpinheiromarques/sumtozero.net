@@ -12,7 +12,7 @@ Soldering gets all the glory in cable building. Everyone obsesses over solder al
 
 How you strip the conductors and sleeve the assemblies is what actually determines whether a cable holds up for years or fails in six months. Here's how I prep my cables, why certain materials matter, and why I use mechanical sleeving instead of heat shrink.
 
-![A stripped audio cable, before & after being prepped.](/static/img/cable_prepped.png "A stripped audio cable, before & after being prepped.")
+{% image "src/static/img/cable_prepped.png", "A stripped audio cable, before & after being prepped.", "100vw", "article-image", "lazy" %}
 #### Image 1. A stripped audio cable, before & after being prepped.
 
 ---
@@ -63,7 +63,7 @@ Consistency matters more than speed here. Nick the inner copper strands while st
 ### The tools
 No affiliate links here. The tools I use are from **Knipex**, and the reason is simple: they're consistent. They make a tool for every part of the job. Cutting, stripping fine inner conductors, stripping thicker individual cables, stripping heavy outer jackets. Whatever diameter you're working with, there's a Knipex tool for it. The photo below gives you a good idea of the range I keep on the bench.
 
-![Several stripping tools from Knipex.](/static/img/knipex_tools.png "Several stripping tools from Knipex.")
+{% image "src/static/img/knipex_tools.png", "Several stripping tools from Knipex.", "100vw", "article-image", "lazy" %}
 #### Image 2. A bunch of my stripping tools, all from Knipex, for inner jacketing and outer jacketing, for different diameter cables (from thin single cables to multicore looms).
 
 ### Stripping lengths
@@ -81,7 +81,7 @@ Instead I use the **Hellermann mechanical sleeving system**. The sleeve goes ove
 ### Tools, sleeves, and lubrication
 You need the <a href="https://www.hellermanntyton.com/products/application-tools-for-sleeves/ss/621-80008" target="_blank">Hellermann SS tool</a> to apply them. It's a three-pronged expansion tool that stretches the sleeve open so you can slide it over the cable end.
 
-![Hellerman SS tool inserting a sleeve on an audio cable.](/static/img/hellerman_tool.png "Hellerman SS tool inserting a sleeve on an audio cable.")
+{% image "src/static/img/hellerman_tool.png", "Hellerman SS tool inserting a sleeve on an audio cable.", "100vw", "article-image", "lazy" %}
 #### Image 3. Hellerman SS tool inserting a sleeve on an audio cable.
 
 I use **H20** sleeves (model PRSH20X20BK) for most applications. They're not pre-lubricated, so you need a drop of <a href="https://www.hellermanntyton.com/products/chemicals/hellerine-m-284-ml/625-00001" target="_blank">Hellerine M oil</a> to get them on cleanly. The **A1** sleeves are slightly larger and come pre-lubricated. No oil needed. They fit most multipairs up to 4 channels, sometimes 8, and they come in a range of colours which is handy for labelling runs in a complex loom.
