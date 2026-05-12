@@ -10,7 +10,7 @@ tags: ["Mastering"]
 
 Colaborei com a Newfangled Audio a criar o <a href="https://www.newfangledaudio.com/fixatemidrange" target="_blank">Fixate:Midrange</a>, um novo plugin que foi lançado hoje!
 
-{% image "src/static/img/fixate.jpg", "Plugin Fixate:Midrange no Knurl Mastering", "100vw", "article-image", "lazy" %}
+{% image "src/static/img/fixate.jpg", "Plugin Fixate:Midrange no Knurl Mastering", "100vw", "article-image", "eager" %}
 
 Tudo começou numa conversa casual com o Dan - o fundador da Newfangled Audio - sobre mastering, áudio e plugins. A certa altura mencionei que praticamente usava sempre os mesmos faders no EQuivocate, e o Dan referiu que isso seria uma boa ideia para um plugin: um EQuivocate especifico para essas aplicações. A partir daí fizemos protótipos, trabalhámos a estrutura e layout do plugin, afinámos o algoritmo, e o que começou como uma ideia simples de cinco <em>knobs</em> tornou-se numa ferramenta muito potente para mistura e mastering.
 
