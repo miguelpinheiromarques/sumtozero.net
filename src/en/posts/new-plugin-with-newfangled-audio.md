@@ -14,4 +14,6 @@ Really happy to finally talk about this one. I helped Dan at Newfangled Audio bu
 
 It all started over Thai food in LA, talking shop about mastering, audio and plugins. At some point I mentioned I kept going back to the same faders on EQuivocate, and Dan just said that could be a great plugin idea: an application based EQuivocate. From there we went through proof of concepts, worked out the structure, fine-tuned the algorithm, and what started as a simple five knob idea grew into a really powerful and capable tool. Really glad it exists, and even happier that it's finally out there for everyone to try and grab.
 
+<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6vde2XDBBls?si=g7ZenkEv5DEkLr3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
 It was really fun to be part of this from the initial idea all the way to a finished product. Go try it out!

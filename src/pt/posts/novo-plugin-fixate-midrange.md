@@ -16,4 +16,6 @@ Tudo começou numa conversa casual com o Dan - o fundador da Newfangled Audio - 
 
 O plugin é focado em resolver problemas de médio em misturas ou instrumentos individuais, tem uma componente dinâmica para resolver problemas como <em>mud</em>, <em>honk</em>, <em>harshness</em> e <em>nasal</em> e uma parte estática baseada na tecnologia do EQuivocate que permite melhorar e corrigir o médio de forma automática ou que pode ser usado como um EQ convencional.
 
+<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6vde2XDBBls?si=g7ZenkEv5DEkLr3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
 O plugin tem uma versão demo, sugiro que experimentem e espero que gostem!
